@@ -52,10 +52,6 @@
                 },
                 {
                     "crop": {
-                        "w": 0,
-                        "x": 0,
-                        "h": 0,
-                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Forest_Background_0.png",
@@ -163,7 +159,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 2,
+                        "x": 3,
                         "y": 5
                     },
                     "type": "Transform",
@@ -245,7 +241,7 @@
         },
         {
             "isActive": true,
-            "name": "Grass Tile Center",
+            "name": "Water",
             "scripts": [
             ],
             "id": 7,
@@ -253,7 +249,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 3,
+                        "x": 4,
                         "y": 5
                     },
                     "type": "Transform",
@@ -348,6 +344,2427 @@
                     "isMusic": false,
                     "type": "SoundSource",
                     "path": "jump.wav"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 9,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -10,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+            ],
+            "id": 10,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 5,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 11,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 1,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 12,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -8,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 13,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -9,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 14,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -7,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 15,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -6,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 16,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -5,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 17,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -4,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 18,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -3,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 19,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -2,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 20,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -1,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 21,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 10,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 22,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 0,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 23,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 2,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 24,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 2,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 25,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 3,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 26,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 4,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 27,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 5,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 28,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 6,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 29,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 7,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 30,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 8,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 31,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 9,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
                 }
             ]
         }

@@ -5,7 +5,7 @@ module Platformer
 
     function run()
         scene = Scene("scene.json")
-        return scene.init("JulGame Example", false, Vector2(1920, 1080),Vector2(1280, 720), true, 1.0, true, 120)
+        return scene.init("JulGame Example", false, Vector2(),Vector2(1280, 720), true, 1.0, true, 120)
     end
 
     julia_main() = run()
