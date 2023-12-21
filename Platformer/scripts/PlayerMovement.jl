@@ -1,27 +1,35 @@
+using JulGame.AnimationModule
+using JulGame.AnimatorModule
+using JulGame.RigidbodyModule
 using JulGame.Macros
+using JulGame.Math
 using JulGame.MainLoop
 using JulGame.SoundSourceModule
 
 mutable struct PlayerMovement
-    elapsedTime
+    animator
     canMove
-    gameManager
     input
     isFacingRight
+    isJump 
+    jumpSound
     parent
-    soundBank
 
-    function PlayerMovement(followers)
+    xDir
+    yDir
+
+    function PlayerMovement()
         this = new()
 
         this.canMove = false
-        this.elapsedTime = 0.0
+        this.input = C_NULL
         this.isFacingRight = true
+        this.isJump = false
         this.parent = C_NULL
-        #this.gameManager = MAIN.scene.entities[1].scripts[1]
-        this.shadow = followers[1]
-        this.soundBank = Dict(
-        )
+        this.jumpSound = C_NULL 
+
+        this.xDir = 0
+        this.yDir = 0
 
         return this
     end
@@ -30,61 +38,85 @@ end
 function Base.getproperty(this::PlayerMovement, s::Symbol)
     if s == :initialize
         function()
+            event = @event begin
+                #this.jump()
+            end
+            # this.animator = this.parent.getAnimator()
+            # this.animator.currentAnimation = this.animator.animations[1]
+            # this.animator.currentAnimation.animatedFPS = 0
+            this.jumpSound = this.parent.getSoundSource()
 
         end
     elseif s == :update
         function(deltaTime)
-           
+            this.canMove = true
+            x = 0
+            speed = 5
+            input = MAIN.input
+
             # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
-            directions = Dict(
-                "A" => (-1, 0),  # Move left
-                "D" => (1, 0),   # Move right
-                "W" => (0, -1),  # Move up
-                "S" => (0, 1)    # Move down
-            )
-
-            # Loop through the directions
-            for (direction, (dx, dy)) in directions
-                if input.getButtonHeldDown(direction) && this.canMove
-                    if input.getButtonPressed(direction)
-                    end
-                    
-                    if dx != 0
-                        if (dx < 0 && this.isFacingRight) || (dx > 0 && !this.isFacingRight)
-                            this.isFacingRight = !this.isFacingRight
-                            this.parent.getSprite().flip()
-                        end
-                    end
-                end
+            if ((input.getButtonPressed("SPACE")  || input.button == 1)|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
+                #this.animator.currentAnimation.animatedFPS = 0
+                #ForceFrameUpdate(this.animator, 2)
+                this.jumpSound.toggleSound()
+                AddVelocity(this.parent.getRigidbody(), Vector2f(0, -5))
             end
-
-            this.bob()
-            this.elapsedTime += deltaTime
-        end
-    elseif s == :bob
-        function()
-            # Define bobbing parameters
-            bobHeight = -0.20  # The maximum height the item will bob
-            bobSpeed = 2.0   # The speed at which the item bobs up and down
-            minBobHeight = -0.10
-
-            # Calculate a sine wave for bobbing motion
-            bobOffset = minBobHeight + bobHeight * (1.0 - cos(bobSpeed * this.elapsedTime)) / 2.0
-        
-            # Update the item's Y-coordinate
-            this.parent.getSprite().offset = JulGame.Math.Vector2f(this.parent.getSprite().offset.x, this.startingY + bobOffset)
+            if (input.getButtonHeldDown("A") || input.xDir == -1) && this.canMove
+                if input.getButtonPressed("A")
+                    #ForceFrameUpdate(this.animator, 2)
+                end
+                x = -speed
+                if this.parent.getRigidbody().grounded
+                    #this.animator.currentAnimation.animatedFPS = 5
+                end
+                if this.isFacingRight
+                    this.isFacingRight = false
+                    this.parent.getSprite().flip()
+                end
+            elseif (input.getButtonHeldDown("D")  || input.xDir == 1) && this.canMove
+                if input.getButtonPressed("D")
+                    #ForceFrameUpdate(this.animator, 2)
+                end
+                if this.parent.getRigidbody().grounded
+                    #this.animator.currentAnimation.animatedFPS = 5
+                end
+                x = speed
+                if !this.isFacingRight
+                    this.isFacingRight = true
+                    this.parent.getSprite().flip()
+                end
+            elseif this.parent.getRigidbody().grounded
+                #this.animator.currentAnimation.animatedFPS = 0
+                #ForceFrameUpdate(this.animator, 1)
+            end
+            
+            SetVelocity(this.parent.getRigidbody(), Vector2f(x, this.parent.getRigidbody().getVelocity().y))
+            x = 0
+            this.isJump = false
+            if this.parent.getTransform().position.y > 8
+                #this.parent.getTransform().position = Vector2f(1, 4)
+            end
         end
     elseif s == :setParent
         function(parent)
             this.parent = parent
+            collisionEvent = @event begin
+                this.handleCollisions()
+            end
+            this.parent.getComponent(Collider).addCollisionEvent(collisionEvent)
+        end
+    elseif s == :handleCollisions
+        function()
+            return
+            collider = this.parent.getComponent(Collider)
+            for collision in collider.currentCollisions
+                if collision.tag == "ground"
+                end
+            end
         end
     else
-        try
-            getfield(this, s)
-        catch e
-            println(e)
-        end
+        getfield(this, s)
     end
 end

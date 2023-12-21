@@ -4,12 +4,8 @@ module Platformer
     using JulGame.SceneBuilderModule
 
     function run()
-        SDL2.init()
-
-        dir = joinpath(pwd(), "..") 
-        scene = Scene(dir, "scene.json")
-        main = scene.init(false, Vector2(1280, 720), 1.25, 60.0, [])
-        return main
+        scene = Scene("scene.json")
+        return scene.init("JulGame Example", false, Vector2(1920, 1080),Vector2(1280, 720), true, 1.0, true, 120)
     end
 
     julia_main() = run()

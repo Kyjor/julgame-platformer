@@ -1,9 +1,9 @@
 using JulGame.MainLoop 
 
-mutable struct GameManager
+mutable struct Background
     parent
 
-    function GameManager()
+    function Background()
         this = new()
 
         this.parent = C_NULL
@@ -12,14 +12,13 @@ mutable struct GameManager
     end
 end
 
-function Base.getproperty(this::GameManager, s::Symbol)
+function Base.getproperty(this::Background, s::Symbol)
     if s == :initialize
         function()
-            MAIN.scene.camera.target = MAIN.scene.getEntityByName("Player").getTransform()
-            MAIN.cameraBackgroundColor = [0, 128, 128]
         end
     elseif s == :update
         function(deltaTime)
+            this.parent.getTransform().position = MAIN.scene.getEntityByName("Player").getTransform().position
         end
     elseif s == :setParent 
         function(parent)

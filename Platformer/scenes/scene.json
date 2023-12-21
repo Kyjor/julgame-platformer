@@ -1,32 +1,357 @@
 {
     "Entities": [
-         
+        {
+            "isActive": true,
+            "name": "Game Manager",
+            "scripts": [
+                {
+                    "name": "GameManager",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 1,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Background",
+            "scripts": [
+                {
+                    "name": "Background",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 2,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 20,
+                        "y": 11.25
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Forest_Background_0.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Left End",
+            "scripts": [
+            ],
+            "id": 3,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 0,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 4,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 1,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 5,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 2,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 6,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 2,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 7,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 3,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Player",
+            "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 8,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Player.png",
+                    "isFlipped": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                }
+            ]
+        }
     ],
     "TextBoxes": [
-        {
-            "fontSize": 40,
-            "name": "TextBox",
-            "sizePercentage": {
-                "x": 0,
-                "y": 0
-            },
-            "id": 1,
-            "position": {
-                "x": 808,
-                "y": 50
-            },
-            "alpha": 255,
-            "autoSizeText": false,
-            "zoom": 1,
-            "isTextUpdated": false,
-            "size": {
-                "x": 304,
-                "y": 40
-            },
-            "isDefaultFont": true,
-            "isCentered": true,
-            "fontPath": "VT323\\VT323-Regular.ttf",
-            "text": "Press R to Ready Up"
-        }
     ]
 }
