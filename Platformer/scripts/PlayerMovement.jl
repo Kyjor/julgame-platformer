@@ -12,13 +12,14 @@ mutable struct PlayerMovement
     input
     isFacingRight
     isJump 
+    jumpVelocity
     jumpSound
     parent
 
     xDir
     yDir
 
-    function PlayerMovement()
+    function PlayerMovement(jumpVelocity = -10)
         this = new()
 
         this.canMove = false
@@ -27,6 +28,7 @@ mutable struct PlayerMovement
         this.isJump = false
         this.parent = C_NULL
         this.jumpSound = C_NULL 
+        this.jumpVelocity = typeof(jumpVelocity) === Float64 ? jumpVelocity : parse(Float64, jumpVelocity)
 
         this.xDir = 0
         this.yDir = 0
@@ -41,9 +43,8 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             event = @event begin
                 #this.jump()
             end
-            # this.animator = this.parent.getAnimator()
-            # this.animator.currentAnimation = this.animator.animations[1]
-            # this.animator.currentAnimation.animatedFPS = 0
+            this.animator = this.parent.getAnimator()
+            this.animator.currentAnimation = this.animator.animations[1]
             this.jumpSound = this.parent.getSoundSource()
 
         end
@@ -58,18 +59,16 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
             if ((input.getButtonPressed("SPACE")  || input.button == 1)|| this.isJump) && this.parent.getRigidbody().grounded && this.canMove 
-                #this.animator.currentAnimation.animatedFPS = 0
-                #ForceFrameUpdate(this.animator, 2)
                 this.jumpSound.toggleSound()
-                AddVelocity(this.parent.getRigidbody(), Vector2f(0, -5))
+                AddVelocity(this.parent.getRigidbody(), Vector2f(0, this.jumpVelocity))
+                this.animator.currentAnimation = this.animator.animations[3]
             end
             if (input.getButtonHeldDown("A") || input.xDir == -1) && this.canMove
                 if input.getButtonPressed("A")
-                    #ForceFrameUpdate(this.animator, 2)
                 end
                 x = -speed
                 if this.parent.getRigidbody().grounded
-                    #this.animator.currentAnimation.animatedFPS = 5
+                    this.animator.currentAnimation = this.animator.animations[2]
                 end
                 if this.isFacingRight
                     this.isFacingRight = false
@@ -77,10 +76,9 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 end
             elseif (input.getButtonHeldDown("D")  || input.xDir == 1) && this.canMove
                 if input.getButtonPressed("D")
-                    #ForceFrameUpdate(this.animator, 2)
                 end
                 if this.parent.getRigidbody().grounded
-                    #this.animator.currentAnimation.animatedFPS = 5
+                    this.animator.currentAnimation = this.animator.animations[2]
                 end
                 x = speed
                 if !this.isFacingRight
@@ -88,8 +86,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     this.parent.getSprite().flip()
                 end
             elseif this.parent.getRigidbody().grounded
-                #this.animator.currentAnimation.animatedFPS = 0
-                #ForceFrameUpdate(this.animator, 1)
+                this.animator.currentAnimation = this.animator.animations[1]
             end
             
             SetVelocity(this.parent.getRigidbody(), Vector2f(x, this.parent.getRigidbody().getVelocity().y))
@@ -109,10 +106,19 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
         end
     elseif s == :handleCollisions
         function()
-            return
             collider = this.parent.getComponent(Collider)
             for collision in collider.currentCollisions
                 if collision.tag == "ground"
+                end
+                if collision.tag == "Coin"
+                    counter = 1
+                    for entity in MAIN.scene.entities
+                        if entity.name == "Coin"
+                            deleteat!(MAIN.scene.entities, counter)
+                            break
+                        end
+                        counter += 1
+                    end
                 end
             end
         end
