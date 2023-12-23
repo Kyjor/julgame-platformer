@@ -93,7 +93,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             x = 0
             this.isJump = false
             if this.parent.getTransform().position.y > 8
-                #this.parent.getTransform().position = Vector2f(1, 4)
+                this.parent.getTransform().position = Vector2f(1, 4)
             end
         end
     elseif s == :setParent

@@ -18,7 +18,7 @@ function Base.getproperty(this::Background, s::Symbol)
         end
     elseif s == :update
         function(deltaTime)
-            this.parent.getTransform().position = MAIN.scene.getEntityByName("Player").getTransform().position
+            this.parent.getTransform().position = MAIN.scene.getEntityByName("Player").getTransform().position + MAIN.scene.camera.offset
         end
     elseif s == :setParent 
         function(parent)
