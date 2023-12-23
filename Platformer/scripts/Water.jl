@@ -19,12 +19,12 @@ end
 function Base.getproperty(this::Water, s::Symbol)
     if s == :initialize
         function()
-            this.offset = JulGame.Math.Vector2f(this.parent.getTransform().position.x, this.parent.getTransform().position.y - 2.75) + MAIN.scene.camera.offset
+            this.offset = JulGame.Math.Vector2f(this.parent.getTransform().position.x + MAIN.scene.camera.offset.x, 5.5)
             this.player = MAIN.scene.getEntityByName("Player")
         end
     elseif s == :update
         function(deltaTime)
-            this.parent.getTransform().position = this.player.getTransform().position + this.offset
+            this.parent.getTransform().position = JulGame.Math.Vector2f(this.player.getTransform().position.x, 0) + this.offset
         end
     elseif s == :setParent 
         function(parent)

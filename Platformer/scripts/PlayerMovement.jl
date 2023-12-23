@@ -5,9 +5,11 @@ using JulGame.Macros
 using JulGame.Math
 using JulGame.MainLoop
 using JulGame.SoundSourceModule
+using JulGame.TransformModule
 
 mutable struct PlayerMovement
     animator
+    cameraTarget
     canMove
     input
     isFacingRight
@@ -46,7 +48,8 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.animator = this.parent.getAnimator()
             this.animator.currentAnimation = this.animator.animations[1]
             this.jumpSound = this.parent.getSoundSource()
-
+            this.cameraTarget = Transform(Vector2f(this.parent.getTransform().position.x, 0))
+            MAIN.scene.camera.target = this.cameraTarget
         end
     elseif s == :update
         function(deltaTime)
@@ -95,6 +98,8 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             if this.parent.getTransform().position.y > 8
                 this.parent.getTransform().position = Vector2f(1, 4)
             end
+
+            this.cameraTarget.position = Vector2f(this.parent.getTransform().position.x, 2.75)
         end
     elseif s == :setParent
         function(parent)

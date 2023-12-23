@@ -15,7 +15,6 @@ end
 function Base.getproperty(this::GameManager, s::Symbol)
     if s == :initialize
         function()
-            MAIN.scene.camera.target = MAIN.scene.getEntityByName("Player").getTransform()
             MAIN.scene.camera.offset = JulGame.Math.Vector2f(0, -2.75)
             MAIN.cameraBackgroundColor = [30, 111, 80]
         end
