@@ -53,6 +53,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Forest_Background_0.png",
@@ -62,10 +66,156 @@
         },
         {
             "isActive": true,
+            "name": "Player",
+            "scripts": [
+                {
+                    "name": "PlayerMovement",
+                    "parameters": [
+                        "-6.5"
+                    ]
+                }
+            ],
+            "id": 3,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Player.png",
+                    "isFlipped": false
+                },
+                {
+                    "mass": 1,
+                    "type": "Rigidbody"
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 6,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        },
+                        {
+                            "animatedFPS": 10,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 64,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 64,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 64,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 64,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        },
+                        {
+                            "animatedFPS": 1,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 112,
+                                    "w": 16,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 112,
+                                    "w": 16,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
             "name": "Grass Tile Left End",
             "scripts": [
             ],
-            "id": 3,
+            "id": 4,
             "components": [
                 {
                     "rotation": 0,
@@ -102,6 +252,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -111,7 +262,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 4,
+            "id": 5,
             "components": [
                 {
                     "rotation": 0,
@@ -148,6 +299,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -157,7 +309,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 5,
+            "id": 6,
             "components": [
                 {
                     "rotation": 0,
@@ -194,6 +346,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -203,7 +356,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 6,
+            "id": 7,
             "components": [
                 {
                     "rotation": 0,
@@ -240,6 +393,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -249,7 +403,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 7,
+            "id": 8,
             "components": [
                 {
                     "rotation": 0,
@@ -282,7 +436,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 8,
+            "id": 9,
             "components": [
                 {
                     "rotation": 0,
@@ -319,6 +473,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -328,7 +483,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 9,
+            "id": 10,
             "components": [
                 {
                     "rotation": 0,
@@ -365,6 +520,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -374,7 +530,7 @@
             "name": "Grass",
             "scripts": [
             ],
-            "id": 10,
+            "id": 11,
             "components": [
                 {
                     "rotation": 0,
@@ -411,6 +567,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -425,7 +582,7 @@
                     ]
                 }
             ],
-            "id": 11,
+            "id": 12,
             "components": [
                 {
                     "rotation": 0,
@@ -521,7 +678,7 @@
                     ]
                 }
             ],
-            "id": 12,
+            "id": 13,
             "components": [
                 {
                     "rotation": 0,
@@ -617,7 +774,7 @@
                     ]
                 }
             ],
-            "id": 13,
+            "id": 14,
             "components": [
                 {
                     "rotation": 0,
@@ -713,7 +870,7 @@
                     ]
                 }
             ],
-            "id": 14,
+            "id": 15,
             "components": [
                 {
                     "rotation": 0,
@@ -809,7 +966,7 @@
                     ]
                 }
             ],
-            "id": 15,
+            "id": 16,
             "components": [
                 {
                     "rotation": 0,
@@ -905,7 +1062,7 @@
                     ]
                 }
             ],
-            "id": 16,
+            "id": 17,
             "components": [
                 {
                     "rotation": 0,
@@ -1001,7 +1158,7 @@
                     ]
                 }
             ],
-            "id": 17,
+            "id": 18,
             "components": [
                 {
                     "rotation": 0,
@@ -1097,7 +1254,7 @@
                     ]
                 }
             ],
-            "id": 18,
+            "id": 19,
             "components": [
                 {
                     "rotation": 0,
@@ -1193,7 +1350,7 @@
                     ]
                 }
             ],
-            "id": 19,
+            "id": 20,
             "components": [
                 {
                     "rotation": 0,
@@ -1289,7 +1446,7 @@
                     ]
                 }
             ],
-            "id": 20,
+            "id": 21,
             "components": [
                 {
                     "rotation": 0,
@@ -1385,7 +1542,7 @@
                     ]
                 }
             ],
-            "id": 21,
+            "id": 22,
             "components": [
                 {
                     "rotation": 0,
@@ -1481,108 +1638,12 @@
                     ]
                 }
             ],
-            "id": 22,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 10,
-                        "y": 8
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 2,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 32,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Water.png",
-                    "isFlipped": false
-                },
-                {
-                    "animations": [
-                        {
-                            "animatedFPS": 16,
-                            "frames": [
-                                {
-                                    "x": 16,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 32
-                                },
-                                {
-                                    "x": 64,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 32
-                                },
-                                {
-                                    "x": 112,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 32
-                                },
-                                {
-                                    "x": 160,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 32
-                                },
-                                {
-                                    "x": 208,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 32
-                                },
-                                {
-                                    "x": 256,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 32
-                                },
-                                {
-                                    "x": 304,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 32
-                                },
-                                {
-                                    "x": 352,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 32
-                                }
-                            ]
-                        }
-                    ],
-                    "type": "Animator"
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Water",
-            "scripts": [
-                {
-                    "name": "Water",
-                    "parameters": [
-                    ]
-                }
-            ],
             "id": 23,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": -2,
+                        "x": 10,
                         "y": 8
                     },
                     "type": "Transform",
@@ -1678,7 +1739,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 1,
+                        "x": -2,
                         "y": 8
                     },
                     "type": "Transform",
@@ -1774,7 +1835,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 0,
+                        "x": 1,
                         "y": 8
                     },
                     "type": "Transform",
@@ -1870,7 +1931,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 2,
+                        "x": 0,
                         "y": 8
                     },
                     "type": "Transform",
@@ -1966,7 +2027,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 4,
+                        "x": 2,
                         "y": 8
                     },
                     "type": "Transform",
@@ -2062,7 +2123,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 7,
+                        "x": 4,
                         "y": 8
                     },
                     "type": "Transform",
@@ -2158,7 +2219,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 5,
+                        "x": 7,
                         "y": 8
                     },
                     "type": "Transform",
@@ -2254,7 +2315,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 6,
+                        "x": 5,
                         "y": 8
                     },
                     "type": "Transform",
@@ -2350,7 +2411,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 8,
+                        "x": 6,
                         "y": 8
                     },
                     "type": "Transform",
@@ -2446,7 +2507,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 3,
+                        "x": 8,
                         "y": 8
                     },
                     "type": "Transform",
@@ -2542,6 +2603,102 @@
                 {
                     "rotation": 0,
                     "position": {
+                        "x": 3,
+                        "y": 8
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 32,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Water.png",
+                    "isFlipped": false
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 16,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 112,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 160,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 208,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 256,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 304,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                },
+                                {
+                                    "x": 352,
+                                    "y": 16,
+                                    "w": 16,
+                                    "h": 32
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Water",
+            "scripts": [
+                {
+                    "name": "Water",
+                    "parameters": [
+                    ]
+                }
+            ],
+            "id": 34,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
                         "x": 9,
                         "y": 8
                     },
@@ -2628,7 +2785,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 34,
+            "id": 35,
             "components": [
                 {
                     "rotation": 0,
@@ -2661,7 +2818,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 35,
+            "id": 36,
             "components": [
                 {
                     "rotation": 0,
@@ -2694,7 +2851,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 36,
+            "id": 37,
             "components": [
                 {
                     "rotation": 0,
@@ -2727,7 +2884,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 37,
+            "id": 38,
             "components": [
                 {
                     "rotation": 0,
@@ -2760,7 +2917,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 38,
+            "id": 39,
             "components": [
                 {
                     "rotation": 0,
@@ -2793,7 +2950,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 39,
+            "id": 40,
             "components": [
                 {
                     "rotation": 0,
@@ -2830,6 +2987,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -2839,7 +2997,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 40,
+            "id": 41,
             "components": [
                 {
                     "rotation": 0,
@@ -2876,6 +3034,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -2885,7 +3044,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 41,
+            "id": 42,
             "components": [
                 {
                     "rotation": 0,
@@ -2922,6 +3081,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -2931,7 +3091,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 42,
+            "id": 43,
             "components": [
                 {
                     "rotation": 0,
@@ -2968,6 +3128,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -2977,7 +3138,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 43,
+            "id": 44,
             "components": [
                 {
                     "rotation": 0,
@@ -3010,7 +3171,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 44,
+            "id": 45,
             "components": [
                 {
                     "rotation": 0,
@@ -3043,7 +3204,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 45,
+            "id": 46,
             "components": [
                 {
                     "rotation": 0,
@@ -3080,6 +3241,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -3089,7 +3251,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 46,
+            "id": 47,
             "components": [
                 {
                     "rotation": 0,
@@ -3126,6 +3288,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -3135,7 +3298,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 47,
+            "id": 48,
             "components": [
                 {
                     "rotation": 0,
@@ -3172,6 +3335,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -3181,7 +3345,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 48,
+            "id": 49,
             "components": [
                 {
                     "rotation": 0,
@@ -3218,6 +3382,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -3227,7 +3392,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 49,
+            "id": 50,
             "components": [
                 {
                     "rotation": 0,
@@ -3260,7 +3425,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 50,
+            "id": 51,
             "components": [
                 {
                     "rotation": 0,
@@ -3293,7 +3458,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 51,
+            "id": 52,
             "components": [
                 {
                     "rotation": 0,
@@ -3326,7 +3491,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 52,
+            "id": 53,
             "components": [
                 {
                     "rotation": 0,
@@ -3359,7 +3524,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 53,
+            "id": 54,
             "components": [
                 {
                     "rotation": 0,
@@ -3392,7 +3557,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 54,
+            "id": 55,
             "components": [
                 {
                     "rotation": 0,
@@ -3425,7 +3590,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 55,
+            "id": 56,
             "components": [
                 {
                     "rotation": 0,
@@ -3458,7 +3623,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 56,
+            "id": 57,
             "components": [
                 {
                     "rotation": 0,
@@ -3495,6 +3660,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -3504,13 +3670,13 @@
             "name": "Coin",
             "scripts": [
             ],
-            "id": 57,
+            "id": 58,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 7,
-                        "y": 2
+                        "x": 63,
+                        "y": 1
                     },
                     "type": "Transform",
                     "scale": {
@@ -3519,7 +3685,7 @@
                     }
                 },
                 {
-                    "layer": 0,
+                    "layer": 2,
                     "crop": {
                         "w": 16,
                         "x": 0,
@@ -3541,7 +3707,8 @@
                         "y": 1
                     },
                     "type": "Collider",
-                    "isTrigger": false
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
                 }
             ]
         },
@@ -3550,7 +3717,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 58,
+            "id": 59,
             "components": [
                 {
                     "rotation": 0,
@@ -3583,7 +3750,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 59,
+            "id": 60,
             "components": [
                 {
                     "rotation": 0,
@@ -3616,7 +3783,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 60,
+            "id": 61,
             "components": [
                 {
                     "rotation": 0,
@@ -3649,7 +3816,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 61,
+            "id": 62,
             "components": [
                 {
                     "rotation": 0,
@@ -3682,7 +3849,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 62,
+            "id": 63,
             "components": [
                 {
                     "rotation": 0,
@@ -3715,7 +3882,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 63,
+            "id": 64,
             "components": [
                 {
                     "rotation": 0,
@@ -3748,7 +3915,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 64,
+            "id": 65,
             "components": [
                 {
                     "rotation": 0,
@@ -3781,7 +3948,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 65,
+            "id": 66,
             "components": [
                 {
                     "rotation": 0,
@@ -3818,6 +3985,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -3827,7 +3995,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 66,
+            "id": 67,
             "components": [
                 {
                     "rotation": 0,
@@ -3864,6 +4032,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -3873,7 +4042,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 67,
+            "id": 68,
             "components": [
                 {
                     "rotation": 0,
@@ -3910,6 +4079,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -3919,7 +4089,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 68,
+            "id": 69,
             "components": [
                 {
                     "rotation": 0,
@@ -3956,6 +4126,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -3965,7 +4136,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 69,
+            "id": 70,
             "components": [
                 {
                     "rotation": 0,
@@ -4002,6 +4173,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -4011,7 +4183,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 70,
+            "id": 71,
             "components": [
                 {
                     "rotation": 0,
@@ -4048,152 +4220,8 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Player",
-            "scripts": [
-                {
-                    "name": "PlayerMovement",
-                    "parameters": [
-                        "-6.5"
-                    ]
-                }
-            ],
-            "id": 71,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 1,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Player.png",
-                    "isFlipped": false
-                },
-                {
-                    "mass": 1,
-                    "type": "Rigidbody"
-                },
-                {
-                    "tag": "Default",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
-                },
-                {
-                    "channel": -1,
-                    "volume": 100,
-                    "sound": {
-                    },
-                    "isMusic": false,
-                    "type": "SoundSource",
-                    "path": "jump.wav"
-                },
-                {
-                    "animations": [
-                        {
-                            "animatedFPS": 2,
-                            "frames": [
-                                {
-                                    "x": 16,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 64,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 112,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 160,
-                                    "y": 16,
-                                    "w": 16,
-                                    "h": 16
-                                }
-                            ]
-                        },
-                        {
-                            "animatedFPS": 5,
-                            "frames": [
-                                {
-                                    "x": 16,
-                                    "y": 64,
-                                    "w": 16,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 64,
-                                    "y": 64,
-                                    "w": 16,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 112,
-                                    "y": 64,
-                                    "w": 16,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 160,
-                                    "y": 64,
-                                    "w": 16,
-                                    "h": 16
-                                }
-                            ]
-                        },
-                        {
-                            "animatedFPS": 1,
-                            "frames": [
-                                {
-                                    "x": 16,
-                                    "y": 112,
-                                    "w": 16,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 64,
-                                    "y": 112,
-                                    "w": 16,
-                                    "h": 16
-                                }
-                            ]
-                        }
-                    ],
-                    "type": "Animator"
                 }
             ]
         },
@@ -4239,6 +4267,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -4450,6 +4479,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -4496,6 +4526,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -4542,6 +4573,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -4588,6 +4620,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -4634,6 +4667,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -4680,6 +4714,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -4726,6 +4761,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -4772,6 +4808,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -5874,6 +5911,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -5920,6 +5958,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -5966,6 +6005,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6012,6 +6052,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6058,6 +6099,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6368,6 +6410,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6414,6 +6457,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6440,6 +6484,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -6456,6 +6504,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6502,6 +6551,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6548,6 +6598,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6594,6 +6645,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6640,6 +6692,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -6851,6 +6904,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -6897,6 +6951,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -6976,6 +7031,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -7022,6 +7078,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -7167,6 +7224,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7213,6 +7271,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7259,6 +7318,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7305,6 +7365,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7351,6 +7412,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7423,56 +7485,10 @@
         },
         {
             "isActive": true,
-            "name": "Grass Tile Left End",
-            "scripts": [
-            ],
-            "id": 158,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 26,
-                        "y": 2
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 0,
-                        "h": 16,
-                        "y": 0
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                },
-                {
-                    "tag": "Default",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 159,
+            "id": 158,
             "components": [
                 {
                     "rotation": 0,
@@ -7509,6 +7525,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7518,7 +7535,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 160,
+            "id": 159,
             "components": [
                 {
                     "rotation": 0,
@@ -7555,6 +7572,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7564,7 +7582,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 161,
+            "id": 160,
             "components": [
                 {
                     "rotation": 0,
@@ -7601,6 +7619,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7610,7 +7629,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 162,
+            "id": 161,
             "components": [
                 {
                     "rotation": 0,
@@ -7647,6 +7666,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7656,7 +7676,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 163,
+            "id": 162,
             "components": [
                 {
                     "rotation": 0,
@@ -7693,6 +7713,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7702,7 +7723,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 164,
+            "id": 163,
             "components": [
                 {
                     "rotation": 0,
@@ -7739,6 +7760,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -7748,7 +7770,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 165,
+            "id": 164,
             "components": [
                 {
                     "rotation": 0,
@@ -7785,6 +7807,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -7794,7 +7817,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 166,
+            "id": 165,
             "components": [
                 {
                     "rotation": 0,
@@ -7831,6 +7854,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -7840,7 +7864,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 167,
+            "id": 166,
             "components": [
                 {
                     "rotation": 0,
@@ -7877,6 +7901,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -7886,7 +7911,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 168,
+            "id": 167,
             "components": [
                 {
                     "rotation": 0,
@@ -7923,6 +7948,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -7932,7 +7958,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 169,
+            "id": 168,
             "components": [
                 {
                     "rotation": 0,
@@ -7965,7 +7991,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 170,
+            "id": 169,
             "components": [
                 {
                     "rotation": 0,
@@ -7998,7 +8024,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 171,
+            "id": 170,
             "components": [
                 {
                     "rotation": 0,
@@ -8031,7 +8057,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 172,
+            "id": 171,
             "components": [
                 {
                     "rotation": 0,
@@ -8068,6 +8094,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8077,7 +8104,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 173,
+            "id": 172,
             "components": [
                 {
                     "rotation": 0,
@@ -8114,6 +8141,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8123,7 +8151,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 174,
+            "id": 173,
             "components": [
                 {
                     "rotation": 0,
@@ -8160,6 +8188,54 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 174,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 38,
+                        "y": 5
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8206,6 +8282,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8216,52 +8293,6 @@
             "scripts": [
             ],
             "id": 176,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 38,
-                        "y": 5
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 0
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                },
-                {
-                    "tag": "Default",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 177,
             "components": [
                 {
                     "rotation": 0,
@@ -8298,6 +8329,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8307,7 +8339,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 178,
+            "id": 177,
             "components": [
                 {
                     "rotation": 0,
@@ -8344,6 +8376,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8353,7 +8386,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 179,
+            "id": 178,
             "components": [
                 {
                     "rotation": 0,
@@ -8390,6 +8423,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8399,7 +8433,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 180,
+            "id": 179,
             "components": [
                 {
                     "rotation": 0,
@@ -8436,6 +8470,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8445,7 +8480,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 181,
+            "id": 180,
             "components": [
                 {
                     "rotation": 0,
@@ -8462,6 +8497,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -8478,6 +8517,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8487,7 +8527,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 182,
+            "id": 181,
             "components": [
                 {
                     "rotation": 0,
@@ -8504,6 +8544,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -8520,6 +8564,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8529,7 +8574,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 183,
+            "id": 182,
             "components": [
                 {
                     "rotation": 0,
@@ -8546,6 +8591,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -8562,6 +8611,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -8571,7 +8621,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 184,
+            "id": 183,
             "components": [
                 {
                     "rotation": 0,
@@ -8588,6 +8638,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -8604,7 +8658,41 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 184,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 18,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
                 }
             ]
         },
@@ -8618,7 +8706,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 18,
+                        "x": 24,
                         "y": 6
                     },
                     "type": "Transform",
@@ -8652,7 +8740,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 24,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -8684,8 +8772,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 24,
-                        "y": 7
+                        "x": 25,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -8718,7 +8806,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 25,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -8750,8 +8838,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 25,
-                        "y": 7
+                        "x": 26,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -8784,7 +8872,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 26,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -8816,8 +8904,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 26,
-                        "y": 7
+                        "x": 27,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -8850,7 +8938,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 27,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -8882,8 +8970,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 27,
-                        "y": 7
+                        "x": 28,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -8916,7 +9004,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 28,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -8948,8 +9036,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 28,
-                        "y": 7
+                        "x": 29,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -8982,7 +9070,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 29,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -9014,7 +9102,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 29,
+                        "x": 30,
                         "y": 7
                     },
                     "type": "Transform",
@@ -9048,7 +9136,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 30,
-                        "y": 7
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -9080,7 +9168,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 30,
+                        "x": 31,
                         "y": 6
                     },
                     "type": "Transform",
@@ -9114,7 +9202,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 31,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -9146,8 +9234,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 31,
-                        "y": 7
+                        "x": 32,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -9180,7 +9268,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 32,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -9212,8 +9300,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 32,
-                        "y": 7
+                        "x": 33,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -9246,7 +9334,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 33,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -9278,8 +9366,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 33,
-                        "y": 7
+                        "x": 34,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -9312,7 +9400,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 34,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -9344,8 +9432,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 34,
-                        "y": 7
+                        "x": 35,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -9378,7 +9466,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 35,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -9410,8 +9498,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 35,
-                        "y": 7
+                        "x": 36,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -9444,39 +9532,6 @@
                     "rotation": 0,
                     "position": {
                         "x": 36,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 211,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 36,
                         "y": 7
                     },
                     "type": "Transform",
@@ -9504,7 +9559,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 212,
+            "id": 211,
             "components": [
                 {
                     "rotation": 0,
@@ -9537,12 +9592,45 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 213,
+            "id": 212,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 37,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 213,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 38,
                         "y": 6
                     },
                     "type": "Transform",
@@ -9576,7 +9664,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 38,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -9608,8 +9696,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 38,
-                        "y": 7
+                        "x": 39,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -9642,39 +9730,6 @@
                     "rotation": 0,
                     "position": {
                         "x": 39,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 217,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 39,
                         "y": 7
                     },
                     "type": "Transform",
@@ -9702,7 +9757,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 218,
+            "id": 217,
             "components": [
                 {
                     "rotation": 0,
@@ -9735,7 +9790,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 219,
+            "id": 218,
             "components": [
                 {
                     "rotation": 0,
@@ -9772,6 +9827,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -9781,7 +9837,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 220,
+            "id": 219,
             "components": [
                 {
                     "rotation": 0,
@@ -9814,7 +9870,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 221,
+            "id": 220,
             "components": [
                 {
                     "rotation": 0,
@@ -9847,7 +9903,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 222,
+            "id": 221,
             "components": [
                 {
                     "rotation": 0,
@@ -9880,7 +9936,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 223,
+            "id": 222,
             "components": [
                 {
                     "rotation": 0,
@@ -9913,7 +9969,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 224,
+            "id": 223,
             "components": [
                 {
                     "rotation": 0,
@@ -9946,7 +10002,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 225,
+            "id": 224,
             "components": [
                 {
                     "rotation": 0,
@@ -9979,7 +10035,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 226,
+            "id": 225,
             "components": [
                 {
                     "rotation": 0,
@@ -10016,6 +10072,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -10025,7 +10082,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 227,
+            "id": 226,
             "components": [
                 {
                     "rotation": 0,
@@ -10062,6 +10119,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -10071,7 +10129,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 228,
+            "id": 227,
             "components": [
                 {
                     "rotation": 0,
@@ -10108,6 +10166,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -10117,7 +10176,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 229,
+            "id": 228,
             "components": [
                 {
                     "rotation": 0,
@@ -10154,6 +10213,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -10163,7 +10223,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 230,
+            "id": 229,
             "components": [
                 {
                     "rotation": 0,
@@ -10200,6 +10260,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -10209,7 +10270,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 231,
+            "id": 230,
             "components": [
                 {
                     "rotation": 0,
@@ -10246,6 +10307,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -10255,7 +10317,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 232,
+            "id": 231,
             "components": [
                 {
                     "rotation": 0,
@@ -10292,6 +10354,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -10301,7 +10364,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 233,
+            "id": 232,
             "components": [
                 {
                     "rotation": 0,
@@ -10338,7 +10401,41 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 233,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 41,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
                 }
             ]
         },
@@ -10352,7 +10449,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 41,
+                        "x": 49,
                         "y": 6
                     },
                     "type": "Transform",
@@ -10386,7 +10483,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 49,
-                        "y": 6
+                        "y": 7
                     },
                     "type": "Transform",
                     "scale": {
@@ -10418,8 +10515,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 49,
-                        "y": 7
+                        "x": 50,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -10452,39 +10549,6 @@
                     "rotation": 0,
                     "position": {
                         "x": 50,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 238,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 50,
                         "y": 7
                     },
                     "type": "Transform",
@@ -10512,7 +10576,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 239,
+            "id": 238,
             "components": [
                 {
                     "rotation": 0,
@@ -10545,7 +10609,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 240,
+            "id": 239,
             "components": [
                 {
                     "rotation": 0,
@@ -10578,7 +10642,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 241,
+            "id": 240,
             "components": [
                 {
                     "rotation": 0,
@@ -10611,12 +10675,45 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 242,
+            "id": 241,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 52,
+                        "y": 7
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 242,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 53,
                         "y": 7
                     },
                     "type": "Transform",
@@ -10650,7 +10747,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 53,
-                        "y": 7
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
@@ -10682,7 +10779,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 53,
+                        "x": 54,
                         "y": 6
                     },
                     "type": "Transform",
@@ -10716,39 +10813,6 @@
                     "rotation": 0,
                     "position": {
                         "x": 54,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 246,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 54,
                         "y": 7
                     },
                     "type": "Transform",
@@ -10776,7 +10840,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 247,
+            "id": 246,
             "components": [
                 {
                     "rotation": 0,
@@ -10809,7 +10873,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 248,
+            "id": 247,
             "components": [
                 {
                     "rotation": 0,
@@ -10842,7 +10906,7 @@
             "name": "Grass Tile Left End",
             "scripts": [
             ],
-            "id": 249,
+            "id": 248,
             "components": [
                 {
                     "rotation": 0,
@@ -10879,6 +10943,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -10888,7 +10953,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 250,
+            "id": 249,
             "components": [
                 {
                     "rotation": 0,
@@ -10925,6 +10990,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -10934,7 +11000,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 251,
+            "id": 250,
             "components": [
                 {
                     "rotation": 0,
@@ -10971,6 +11037,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -10980,7 +11047,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 252,
+            "id": 251,
             "components": [
                 {
                     "rotation": 0,
@@ -11017,6 +11084,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -11026,7 +11094,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 253,
+            "id": 252,
             "components": [
                 {
                     "rotation": 0,
@@ -11059,7 +11127,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 254,
+            "id": 253,
             "components": [
                 {
                     "rotation": 0,
@@ -11092,7 +11160,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 255,
+            "id": 254,
             "components": [
                 {
                     "rotation": 0,
@@ -11125,7 +11193,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 256,
+            "id": 255,
             "components": [
                 {
                     "rotation": 0,
@@ -11158,7 +11226,7 @@
             "name": "Grass Tile Left End",
             "scripts": [
             ],
-            "id": 257,
+            "id": 256,
             "components": [
                 {
                     "rotation": 0,
@@ -11195,6 +11263,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -11204,7 +11273,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 258,
+            "id": 257,
             "components": [
                 {
                     "rotation": 0,
@@ -11241,6 +11310,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -11250,7 +11320,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 259,
+            "id": 258,
             "components": [
                 {
                     "rotation": 0,
@@ -11287,6 +11357,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -11296,7 +11367,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 260,
+            "id": 259,
             "components": [
                 {
                     "rotation": 0,
@@ -11333,6 +11404,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -11342,7 +11414,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 261,
+            "id": 260,
             "components": [
                 {
                     "rotation": 0,
@@ -11379,6 +11451,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -11388,7 +11461,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 262,
+            "id": 261,
             "components": [
                 {
                     "rotation": 0,
@@ -11421,7 +11494,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 263,
+            "id": 262,
             "components": [
                 {
                     "rotation": 0,
@@ -11454,7 +11527,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 264,
+            "id": 263,
             "components": [
                 {
                     "rotation": 0,
@@ -11491,6 +11564,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -11500,7 +11574,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 265,
+            "id": 264,
             "components": [
                 {
                     "rotation": 0,
@@ -11537,6 +11611,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -11546,7 +11621,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 266,
+            "id": 265,
             "components": [
                 {
                     "rotation": 0,
@@ -11583,6 +11658,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -11592,7 +11668,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 267,
+            "id": 266,
             "components": [
                 {
                     "rotation": 0,
@@ -11629,6 +11705,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -11638,7 +11715,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 268,
+            "id": 267,
             "components": [
                 {
                     "rotation": 0,
@@ -11675,6 +11752,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -11684,7 +11762,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 269,
+            "id": 268,
             "components": [
                 {
                     "rotation": 0,
@@ -11717,7 +11795,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 270,
+            "id": 269,
             "components": [
                 {
                     "rotation": 0,
@@ -11750,7 +11828,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 271,
+            "id": 270,
             "components": [
                 {
                     "rotation": 0,
@@ -11783,12 +11861,45 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 272,
+            "id": 271,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 56,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 272,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 57,
                         "y": 6
                     },
                     "type": "Transform",
@@ -11821,39 +11932,6 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 57,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 274,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
                         "x": 69,
                         "y": 7
                     },
@@ -11882,7 +11960,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 275,
+            "id": 274,
             "components": [
                 {
                     "rotation": 0,
@@ -11915,7 +11993,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 276,
+            "id": 275,
             "components": [
                 {
                     "rotation": 0,
@@ -11948,12 +12026,45 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 277,
+            "id": 276,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 58,
+                        "y": 7
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 277,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 57,
                         "y": 7
                     },
                     "type": "Transform",
@@ -11986,7 +12097,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 57,
+                        "x": 56,
                         "y": 7
                     },
                     "type": "Transform",
@@ -12019,8 +12130,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 56,
-                        "y": 7
+                        "x": 57,
+                        "y": 4
                     },
                     "type": "Transform",
                     "scale": {
@@ -12052,7 +12163,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 57,
+                        "x": 58,
                         "y": 4
                     },
                     "type": "Transform",
@@ -12085,7 +12196,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 58,
+                        "x": 59,
                         "y": 4
                     },
                     "type": "Transform",
@@ -12119,39 +12230,6 @@
                     "rotation": 0,
                     "position": {
                         "x": 59,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 283,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 59,
                         "y": 3
                     },
                     "type": "Transform",
@@ -12179,7 +12257,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 284,
+            "id": 283,
             "components": [
                 {
                     "rotation": 0,
@@ -12212,7 +12290,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 285,
+            "id": 284,
             "components": [
                 {
                     "rotation": 0,
@@ -12249,6 +12327,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -12258,7 +12337,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 286,
+            "id": 285,
             "components": [
                 {
                     "rotation": 0,
@@ -12295,6 +12374,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -12304,7 +12384,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 287,
+            "id": 286,
             "components": [
                 {
                     "rotation": 0,
@@ -12341,6 +12421,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -12350,7 +12431,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 288,
+            "id": 287,
             "components": [
                 {
                     "rotation": 0,
@@ -12383,7 +12464,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 289,
+            "id": 288,
             "components": [
                 {
                     "rotation": 0,
@@ -12416,7 +12497,7 @@
             "name": "Grass Tile Left End",
             "scripts": [
             ],
-            "id": 290,
+            "id": 289,
             "components": [
                 {
                     "rotation": 0,
@@ -12453,6 +12534,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -12462,7 +12544,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 291,
+            "id": 290,
             "components": [
                 {
                     "rotation": 0,
@@ -12499,6 +12581,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -12508,7 +12591,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 292,
+            "id": 291,
             "components": [
                 {
                     "rotation": 0,
@@ -12545,6 +12628,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -12554,7 +12638,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 293,
+            "id": 292,
             "components": [
                 {
                     "rotation": 0,
@@ -12591,6 +12675,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -12600,7 +12685,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 294,
+            "id": 293,
             "components": [
                 {
                     "rotation": 0,
@@ -12637,6 +12722,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -12646,7 +12732,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 295,
+            "id": 294,
             "components": [
                 {
                     "rotation": 0,
@@ -12663,6 +12749,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -12679,6 +12769,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -12688,7 +12779,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 296,
+            "id": 295,
             "components": [
                 {
                     "rotation": 0,
@@ -12705,6 +12796,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -12721,6 +12816,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -12730,7 +12826,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 297,
+            "id": 296,
             "components": [
                 {
                     "rotation": 0,
@@ -12747,6 +12843,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -12763,6 +12863,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -12772,7 +12873,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 298,
+            "id": 297,
             "components": [
                 {
                     "rotation": 0,
@@ -12789,6 +12890,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -12805,7 +12910,41 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 298,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 58,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
                 }
             ]
         },
@@ -12819,7 +12958,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 58,
+                        "x": 66,
                         "y": 3
                     },
                     "type": "Transform",
@@ -12852,7 +12991,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 66,
+                        "x": 67,
                         "y": 3
                     },
                     "type": "Transform",
@@ -12885,8 +13024,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 67,
-                        "y": 3
+                        "x": 66,
+                        "y": 4
                     },
                     "type": "Transform",
                     "scale": {
@@ -12918,7 +13057,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 66,
+                        "x": 67,
                         "y": 4
                     },
                     "type": "Transform",
@@ -12951,7 +13090,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 67,
+                        "x": 68,
                         "y": 4
                     },
                     "type": "Transform",
@@ -12984,39 +13123,6 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 68,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 305,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
                         "x": 60,
                         "y": 3
                     },
@@ -13045,7 +13151,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 306,
+            "id": 305,
             "components": [
                 {
                     "rotation": 0,
@@ -13070,6 +13176,20 @@
                     "type": "Sprite",
                     "imagePath": "Grass_Oneway.png",
                     "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": true,
+                    "isTrigger": false
                 }
             ]
         },
@@ -13078,7 +13198,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 307,
+            "id": 306,
             "components": [
                 {
                     "rotation": 0,
@@ -13115,6 +13235,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -13124,7 +13245,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 308,
+            "id": 307,
             "components": [
                 {
                     "rotation": 0,
@@ -13161,6 +13282,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -13170,7 +13292,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 309,
+            "id": 308,
             "components": [
                 {
                     "rotation": 0,
@@ -13207,7 +13329,41 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 309,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 66,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
                 }
             ]
         },
@@ -13221,7 +13377,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 66,
+                        "x": 67,
                         "y": 6
                     },
                     "type": "Transform",
@@ -13254,7 +13410,7 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 67,
+                        "x": 68,
                         "y": 6
                     },
                     "type": "Transform",
@@ -13287,39 +13443,6 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 68,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 313,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
                         "x": 70,
                         "y": 7
                     },
@@ -13348,7 +13471,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 314,
+            "id": 313,
             "components": [
                 {
                     "rotation": 0,
@@ -13381,7 +13504,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 315,
+            "id": 314,
             "components": [
                 {
                     "rotation": 0,
@@ -13414,7 +13537,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 316,
+            "id": 315,
             "components": [
                 {
                     "rotation": 0,
@@ -13447,7 +13570,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 317,
+            "id": 316,
             "components": [
                 {
                     "rotation": 0,
@@ -13480,7 +13603,7 @@
             "name": "Grass Tile Left End",
             "scripts": [
             ],
-            "id": 318,
+            "id": 317,
             "components": [
                 {
                     "rotation": 0,
@@ -13505,19 +13628,6 @@
                     "type": "Sprite",
                     "imagePath": "Grass_Oneway.png",
                     "isFlipped": false
-                },
-                {
-                    "tag": "Default",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isTrigger": false
                 }
             ]
         },
@@ -13526,7 +13636,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 319,
+            "id": 318,
             "components": [
                 {
                     "rotation": 0,
@@ -13563,6 +13673,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -13572,7 +13683,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 320,
+            "id": 319,
             "components": [
                 {
                     "rotation": 0,
@@ -13609,6 +13720,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -13618,7 +13730,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 321,
+            "id": 320,
             "components": [
                 {
                     "rotation": 0,
@@ -13655,6 +13767,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": true,
                     "isTrigger": false
                 }
             ]
@@ -13664,7 +13777,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 322,
+            "id": 321,
             "components": [
                 {
                     "rotation": 0,
@@ -13701,6 +13814,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -13710,7 +13824,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 323,
+            "id": 322,
             "components": [
                 {
                     "rotation": 0,
@@ -13747,6 +13861,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -13756,7 +13871,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 324,
+            "id": 323,
             "components": [
                 {
                     "rotation": 0,
@@ -13793,6 +13908,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -13802,7 +13918,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 325,
+            "id": 324,
             "components": [
                 {
                     "rotation": 0,
@@ -13839,6 +13955,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -13848,7 +13965,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 326,
+            "id": 325,
             "components": [
                 {
                     "rotation": 0,
@@ -13885,6 +14002,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -13894,7 +14012,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 327,
+            "id": 326,
             "components": [
                 {
                     "rotation": 0,
@@ -13931,6 +14049,7 @@
                         "y": 1
                     },
                     "type": "Collider",
+                    "isPlatformerCollider": false,
                     "isTrigger": false
                 }
             ]
@@ -13940,7 +14059,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 328,
+            "id": 327,
             "components": [
                 {
                     "rotation": 0,
@@ -13973,7 +14092,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 329,
+            "id": 328,
             "components": [
                 {
                     "rotation": 0,
@@ -14006,7 +14125,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 330,
+            "id": 329,
             "components": [
                 {
                     "rotation": 0,
@@ -14039,7 +14158,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 331,
+            "id": 330,
             "components": [
                 {
                     "rotation": 0,
@@ -14072,7 +14191,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 332,
+            "id": 331,
             "components": [
                 {
                     "rotation": 0,
@@ -14105,7 +14224,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 333,
+            "id": 332,
             "components": [
                 {
                     "rotation": 0,
@@ -14138,7 +14257,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 334,
+            "id": 333,
             "components": [
                 {
                     "rotation": 0,
@@ -14171,12 +14290,45 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 335,
+            "id": 334,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 74,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Grass_Oneway.png",
+                    "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Grass Tile Center",
+            "scripts": [
+            ],
+            "id": 335,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 75,
                         "y": 6
                     },
                     "type": "Transform",
@@ -14210,39 +14362,6 @@
                     "rotation": 0,
                     "position": {
                         "x": 75,
-                        "y": 6
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                        "w": 16,
-                        "x": 16,
-                        "h": 16,
-                        "y": 16
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Grass_Oneway.png",
-                    "isFlipped": false
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Grass Tile Center",
-            "scripts": [
-            ],
-            "id": 337,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 75,
                         "y": 7
                     },
                     "type": "Transform",
@@ -14270,7 +14389,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 338,
+            "id": 337,
             "components": [
                 {
                     "rotation": 0,
@@ -14303,7 +14422,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 339,
+            "id": 338,
             "components": [
                 {
                     "rotation": 0,
@@ -14336,7 +14455,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 340,
+            "id": 339,
             "components": [
                 {
                     "rotation": 0,
@@ -14369,7 +14488,7 @@
             "name": "Grass Tile Center",
             "scripts": [
             ],
-            "id": 341,
+            "id": 340,
             "components": [
                 {
                     "rotation": 0,
@@ -14394,6 +14513,664 @@
                     "type": "Sprite",
                     "imagePath": "Grass_Oneway.png",
                     "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 341,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 8,
+                        "y": 2
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 342,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 14,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 343,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 27,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 344,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 11,
+                        "y": -1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 345,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 28,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 346,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 45,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 347,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 52,
+                        "y": 2
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 348,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 58,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 349,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 59,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 350,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 81,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 351,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 66,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 352,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 62,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 353,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 67,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 354,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 74,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
                 }
             ]
         }

@@ -113,17 +113,8 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
         function()
             collider = this.parent.getComponent(Collider)
             for collision in collider.currentCollisions
-                if collision.tag == "ground"
-                end
                 if collision.tag == "Coin"
-                    counter = 1
-                    for entity in MAIN.scene.entities
-                        if entity.name == "Coin"
-                            deleteat!(MAIN.scene.entities, counter)
-                            break
-                        end
-                        counter += 1
-                    end
+                    DestroyEntity(collision.parent)
                 end
             end
         end
