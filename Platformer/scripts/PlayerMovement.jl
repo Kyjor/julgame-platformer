@@ -11,6 +11,7 @@ mutable struct PlayerMovement
     animator
     cameraTarget
     canMove
+    coinSound
     input
     isFacingRight
     isJump 
@@ -29,6 +30,7 @@ mutable struct PlayerMovement
         this.isFacingRight = true
         this.isJump = false
         this.parent = C_NULL
+        this.coinSound = SoundSource("coin.wav", 1, 50)
         this.jumpSound = C_NULL 
         this.jumpVelocity = typeof(jumpVelocity) === Float64 ? jumpVelocity : parse(Float64, jumpVelocity)
 
@@ -97,6 +99,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.isJump = false
             if this.parent.getTransform().position.y > 8
                 this.parent.getTransform().position = Vector2f(1, 4)
+                MAIN.scene.textBoxes[2].updateText(string(parse(Int, MAIN.scene.textBoxes[2].text) - 1))
             end
 
             this.cameraTarget.position = Vector2f(this.parent.getTransform().position.x, 2.75)
@@ -115,6 +118,8 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             for collision in collider.currentCollisions
                 if collision.tag == "Coin"
                     DestroyEntity(collision.parent)
+                    this.coinSound.toggleSound()
+                    MAIN.scene.textBoxes[1].updateText(string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
                 end
             end
         end

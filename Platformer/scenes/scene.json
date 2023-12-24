@@ -20,8 +20,8 @@
                     },
                     "type": "Transform",
                     "scale": {
-                        "x": 0,
-                        "y": 0
+                        "x": 10,
+                        "y": 10
                     }
                 }
             ]
@@ -14527,7 +14527,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 8,
-                        "y": 2
+                        "y": 1
                     },
                     "type": "Transform",
                     "scale": {
@@ -14621,7 +14621,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 27,
-                        "y": 1
+                        "y": 0
                     },
                     "type": "Transform",
                     "scale": {
@@ -14668,7 +14668,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 11,
-                        "y": -1
+                        "y": -2
                     },
                     "type": "Transform",
                     "scale": {
@@ -14715,7 +14715,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 28,
-                        "y": 1
+                        "y": 0
                     },
                     "type": "Transform",
                     "scale": {
@@ -14809,7 +14809,7 @@
                     "rotation": 0,
                     "position": {
                         "x": 52,
-                        "y": 2
+                        "y": 1
                     },
                     "type": "Transform",
                     "scale": {
@@ -15182,10 +15182,10 @@
             "id": 1,
             "isWorldEntity": false,
             "position": {
-                "x": 292,
-                "y": 0
+                "x": 50,
+                "y": 75
             },
-            "isCenteredX": true,
+            "isCenteredX": false,
             "alpha": 255,
             "isTextUpdated": false,
             "size": {
@@ -15194,8 +15194,29 @@
             },
             "isDefaultFont": true,
             "isCenteredY": false,
-            "fontPath": "FiraCode\\ttf\\FiraCode-Regular.ttf",
-            "text": "Test Text"
+            "fontPath": "Round9x13.ttf",
+            "text": "0/17"
+        },
+        {
+            "fontSize": 40,
+            "name": "TextBox",
+            "id": 1,
+            "isWorldEntity": false,
+            "position": {
+                "x": 50,
+                "y": 25
+            },
+            "isCenteredX": false,
+            "alpha": 255,
+            "isTextUpdated": false,
+            "size": {
+                "x": 216,
+                "y": 48
+            },
+            "isDefaultFont": true,
+            "isCenteredY": false,
+            "fontPath": "Round9x13.ttf",
+            "text": "3"
         }
     ]
 }
