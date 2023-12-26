@@ -20,8 +20,8 @@
                     },
                     "type": "Transform",
                     "scale": {
-                        "x": 5,
-                        "y": 3
+                        "x": 1.75,
+                        "y": 1.5
                     }
                 }
             ]
@@ -14814,7 +14814,7 @@
         },
         {
             "isActive": true,
-            "name": "Coin",
+            "name": "CoinUI",
             "scripts": [
             ],
             "id": 347,
@@ -14822,13 +14822,13 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 52,
-                        "y": 1
+                        "x": -4,
+                        "y": -7
                     },
                     "type": "Transform",
                     "scale": {
-                        "x": 1,
-                        "y": 1
+                        "x": 0.5,
+                        "y": 0.5
                     }
                 },
                 {
@@ -14840,22 +14840,8 @@
                         "y": 0
                     },
                     "type": "Sprite",
-                    "imagePath": "Coin.png",
+                    "imagePath": "Coins_Ui.png",
                     "isFlipped": false
-                },
-                {
-                    "tag": "Coin",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isPlatformerCollider": false,
-                    "isTrigger": true
                 }
             ]
         },
@@ -16255,6 +16241,86 @@
                         }
                     ],
                     "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 368,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 52,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "LivesUI",
+            "scripts": [
+            ],
+            "id": 369,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": -4,
+                        "y": -8
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 0.5,
+                        "y": 0.5
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Stars_Ui.png",
+                    "isFlipped": false
                 }
             ]
         }
