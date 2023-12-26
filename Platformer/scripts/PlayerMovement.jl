@@ -98,8 +98,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             x = 0
             this.isJump = false
             if this.parent.getTransform().position.y > 8
-                this.parent.getTransform().position = Vector2f(1, 4)
-                MAIN.scene.textBoxes[2].updateText(string(parse(Int, MAIN.scene.textBoxes[2].text) - 1))
+                this.respawn()
             end
 
             this.cameraTarget.position = Vector2f(this.parent.getTransform().position.x, 2.75)
@@ -120,8 +119,15 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     DestroyEntity(collision.parent)
                     this.coinSound.toggleSound()
                     MAIN.scene.textBoxes[1].updateText(string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
+                elseif collision.tag == "Hazard"
+                    this.respawn()
                 end
             end
+        end
+    elseif s == :respawn
+        function()
+            this.parent.getTransform().position = Vector2f(1, 4)
+            MAIN.scene.textBoxes[2].updateText(string(parse(Int, MAIN.scene.textBoxes[2].text) - 1))
         end
     else
         getfield(this, s)
