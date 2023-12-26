@@ -13595,6 +13595,20 @@
                     "type": "Sprite",
                     "imagePath": "Grass_Tileset.png",
                     "isFlipped": false
+                },
+                {
+                    "tag": "Default",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
                 }
             ]
         },
@@ -15176,6 +15190,190 @@
         },
         {
             "isActive": true,
+            "name": "Spider1",
+            "scripts": [
+                {
+                    "name": "Spider",
+                    "parameters": [
+                        "2",
+                        "26",
+                        "29"
+                    ]
+                }
+            ],
+            "id": 355,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 27,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 2,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 32,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Spider_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0.5,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 4,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 80,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 144,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Spider",
+            "scripts": [
+                {
+                    "name": "Spider",
+                    "parameters": [
+                        "2",
+                        "10",
+                        "13"
+                    ]
+                }
+            ],
+            "id": 356,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 12,
+                        "y": -1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 2,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 32,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Spider_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0.5,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 4,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 80,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 144,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
             "name": "Spider",
             "scripts": [
                 {
@@ -15187,13 +15385,197 @@
                     ]
                 }
             ],
-            "id": 355,
+            "id": 357,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
                         "x": 7,
                         "y": 2
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 2,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 32,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Spider_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0.5,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 4,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 80,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 144,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Spider1",
+            "scripts": [
+                {
+                    "name": "Spider",
+                    "parameters": [
+                        "2",
+                        "56",
+                        "69"
+                    ]
+                }
+            ],
+            "id": 358,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 63,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 2,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 32,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Spider_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0.5,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 4,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 80,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 144,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Spider1",
+            "scripts": [
+                {
+                    "name": "Spider",
+                    "parameters": [
+                        "2",
+                        "27",
+                        "30"
+                    ]
+                }
+            ],
+            "id": 359,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 29,
+                        "y": 4
                     },
                     "type": "Transform",
                     "scale": {

@@ -9,14 +9,14 @@ using JulGame.TransformModule
 
 mutable struct Spider
     animator::AnimatorModule.Animator
-    endingX::Number
+    endingX::Int32
     isMovingRight::Bool
     parent::JulGame.EntityModule.Entity
     sound::SoundSourceModule.SoundSource
     speed::Number
-    startingX::Number
+    startingX::Int32
 
-    function Spider(speed::Number = 5, startingX::Number = 0, endingX::Number = 0)
+    function Spider(speed::Number = 5, startingX::Int32 = Int32(0), endingX::Int32 = Int32(0))
         this = new()
 
         this.endingX = endingX
