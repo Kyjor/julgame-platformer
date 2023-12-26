@@ -14634,8 +14634,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 27,
-                        "y": 0
+                        "x": 32,
+                        "y": 4
                     },
                     "type": "Transform",
                     "scale": {
@@ -14728,8 +14728,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 28,
-                        "y": 0
+                        "x": 33,
+                        "y": 4
                     },
                     "type": "Transform",
                     "scale": {
@@ -15190,14 +15190,14 @@
         },
         {
             "isActive": true,
-            "name": "Spider1",
+            "name": "Fish",
             "scripts": [
                 {
-                    "name": "Spider",
+                    "name": "Fish",
                     "parameters": [
-                        "2",
-                        "26",
-                        "29"
+                        "3",
+                        "7",
+                        "0"
                     ]
                 }
             ],
@@ -15206,31 +15206,31 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 27,
-                        "y": 1
+                        "x": 47,
+                        "y": 6
                     },
                     "type": "Transform",
                     "scale": {
-                        "x": 2,
-                        "y": 1
+                        "x": 1,
+                        "y": 1.1875
                     }
                 },
                 {
                     "layer": 1,
                     "crop": {
-                        "w": 32,
+                        "w": 16,
                         "x": 16,
-                        "h": 16,
-                        "y": 16
+                        "h": 19,
+                        "y": 13
                     },
                     "type": "Sprite",
-                    "imagePath": "Spider_1.png",
+                    "imagePath": "Fish_1.png",
                     "isFlipped": false
                 },
                 {
                     "tag": "Hazard",
                     "offset": {
-                        "x": 0.5,
+                        "x": 0,
                         "y": 0
                     },
                     "size": {
@@ -15253,25 +15253,19 @@
                 {
                     "animations": [
                         {
-                            "animatedFPS": 4,
+                            "animatedFPS": 5,
                             "frames": [
                                 {
                                     "x": 16,
-                                    "y": 16,
-                                    "w": 32,
-                                    "h": 16
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
                                 },
                                 {
-                                    "x": 80,
-                                    "y": 16,
-                                    "w": 32,
-                                    "h": 16
-                                },
-                                {
-                                    "x": 144,
-                                    "y": 16,
-                                    "w": 32,
-                                    "h": 16
+                                    "x": 64,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
                                 }
                             ]
                         }
@@ -15640,6 +15634,622 @@
                                     "y": 16,
                                     "w": 32,
                                     "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 360,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 27,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 361,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 28,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Spider1",
+            "scripts": [
+                {
+                    "name": "Spider",
+                    "parameters": [
+                        "2",
+                        "26",
+                        "29"
+                    ]
+                }
+            ],
+            "id": 362,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 27,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 2,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 32,
+                        "x": 16,
+                        "h": 16,
+                        "y": 16
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Spider_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0.5,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 4,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 80,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                },
+                                {
+                                    "x": 144,
+                                    "y": 16,
+                                    "w": 32,
+                                    "h": 16
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Fish",
+            "scripts": [
+                {
+                    "name": "Fish",
+                    "parameters": [
+                        "4",
+                        "7",
+                        "-2"
+                    ]
+                }
+            ],
+            "id": 363,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 61,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1.1875
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 19,
+                        "y": 13
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Fish_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 5,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Fish",
+            "scripts": [
+                {
+                    "name": "Fish",
+                    "parameters": [
+                        "2",
+                        "7",
+                        "2"
+                    ]
+                }
+            ],
+            "id": 364,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 21,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1.1875
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 19,
+                        "y": 13
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Fish_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 5,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Fish",
+            "scripts": [
+                {
+                    "name": "Fish",
+                    "parameters": [
+                        "3",
+                        "7",
+                        "0"
+                    ]
+                }
+            ],
+            "id": 365,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 22,
+                        "y": 1
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1.1875
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 19,
+                        "y": 13
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Fish_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 5,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Fish",
+            "scripts": [
+                {
+                    "name": "Fish",
+                    "parameters": [
+                        "2",
+                        "7",
+                        "2"
+                    ]
+                }
+            ],
+            "id": 366,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 44,
+                        "y": 6
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1.1875
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 19,
+                        "y": 13
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Fish_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 5,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                }
+                            ]
+                        }
+                    ],
+                    "type": "Animator"
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Fish",
+            "scripts": [
+                {
+                    "name": "Fish",
+                    "parameters": [
+                        "4",
+                        "7",
+                        "-2"
+                    ]
+                }
+            ],
+            "id": 367,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 64,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1.1875
+                    }
+                },
+                {
+                    "layer": 1,
+                    "crop": {
+                        "w": 16,
+                        "x": 16,
+                        "h": 19,
+                        "y": 13
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Fish_1.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Hazard",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": false
+                },
+                {
+                    "channel": -1,
+                    "volume": 100,
+                    "sound": {
+                    },
+                    "isMusic": false,
+                    "type": "SoundSource",
+                    "path": "jump.wav"
+                },
+                {
+                    "animations": [
+                        {
+                            "animatedFPS": 5,
+                            "frames": [
+                                {
+                                    "x": 16,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
+                                },
+                                {
+                                    "x": 64,
+                                    "y": 13,
+                                    "w": 16,
+                                    "h": 19
                                 }
                             ]
                         }
