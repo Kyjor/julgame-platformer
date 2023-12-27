@@ -7,22 +7,22 @@ using JulGame.MainLoop
 using JulGame.SoundSourceModule
 using JulGame.TransformModule
 
-mutable struct Fish
+mutable struct Saw
     animator::AnimatorModule.Animator
     endingY::Int32
-    isFire::Bool
     isMovingUp::Bool
+    rotation::Int32
     parent::JulGame.EntityModule.Entity
     sound::SoundSourceModule.SoundSource
     speed::Number
     startingY::Int32
 
-    function Fish(speed::Number = 5, startingY::Int32 = Int32(0), endingY::Int32 = Int32(0), isFire::Bool = false)
+    function Saw(speed::Number = 5, startingY::Int32 = Int32(0), endingY::Int32 = Int32(0))
         this = new()
 
         this.endingY = endingY
-        this.isFire = isFire
         this.isMovingUp = false
+        this.rotation = 0
         this.speed = speed
         this.startingY = startingY
 
@@ -30,19 +30,18 @@ mutable struct Fish
     end
 end
 
-function Base.getproperty(this::Fish, s::Symbol)
+function Base.getproperty(this::Saw, s::Symbol)
     if s == :initialize
         function()
-            this.animator = this.parent.getAnimator()
-            this.parent.getSprite().rotation = 90
         end
     elseif s == :update
         function(deltaTime)
+            this.rotation += 5
+            this.parent.getSprite().rotation =  this.rotation
+
             if this.parent.getTransform().position.y >= this.startingY && !this.isMovingUp
-                this.parent.getSprite().rotation = this.isFire ? 0 : 90
                 this.isMovingUp = true
             elseif this.parent.getTransform().position.y <= this.endingY && this.isMovingUp
-                this.parent.getSprite().rotation = this.isFire ? 180 : 270
                 this.isMovingUp = false
             end
 
