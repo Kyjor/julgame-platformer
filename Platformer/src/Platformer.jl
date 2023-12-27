@@ -4,7 +4,7 @@ module Platformer
     using JulGame.SceneBuilderModule
     
     function run()
-        scene = Scene("scene.json")
+        scene = Scene("level_1.json")
         return scene.init("JulGame Example", false, Vector2(),Vector2(1280, 720), true, 1.0, true, 60)
     end
 
