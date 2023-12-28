@@ -12,6 +12,7 @@ mutable struct PlayerMovement
     cameraTarget
     canMove
     coinSound
+    deathsThisLevel
     gameManager
     hurtSound
     input
@@ -20,6 +21,7 @@ mutable struct PlayerMovement
     jumpVelocity
     jumpSound
     parent
+    starSound
 
     xDir
     yDir
@@ -34,6 +36,7 @@ mutable struct PlayerMovement
         this.parent = C_NULL
         this.coinSound = SoundSource("coin.wav", 1, 50)
         this.hurtSound = SoundSource("hit.wav", 1, 50)
+        this.starSound = SoundSource("power-up.wav", 1, 50)
         this.jumpSound = C_NULL 
         this.jumpVelocity = typeof(jumpVelocity) === Float64 ? jumpVelocity : parse(Float64, jumpVelocity)
 
@@ -53,6 +56,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.cameraTarget = Transform(Vector2f(this.parent.getTransform().position.x, 0))
             MAIN.scene.camera.target = this.cameraTarget
             this.gameManager = MAIN.scene.getEntityByName("Game Manager").scripts[1]
+            this.deathsThisLevel = 0
         end
     elseif s == :update
         function(deltaTime)
@@ -117,11 +121,17 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 DestroyEntity(otherCollider.parent)
                 this.coinSound.toggleSound()
                 MAIN.scene.textBoxes[1].updateText(string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
-                if parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) == parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])
+                if parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) == 1#parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])
                     if this.gameManager.currentLevel == 1
+                        if this.deathsThisLevel == 0
+                            this.gameManager.starCount = this.gameManager.starCount + 1
+                        end
                         this.gameManager.currentLevel = 2
                         ChangeScene("level_2.json")
                     elseif this.gameManager.currentLevel == 2
+                        if this.deathsThisLevel == 0
+                            this.gameManager.starCount = this.gameManager.starCount + 1
+                        end
                         this.gameManager.currentLevel = 3
                         ChangeScene("level_3.json")
                     else 
@@ -129,17 +139,28 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                         MAIN.scene.textBoxes[1].isCenteredX, MAIN.scene.textBoxes[1].isCenteredY = true, true
                         MAIN.scene.textBoxes[1].updateText("You Win!")
                         MAIN.scene.textBoxes[1].setColor(0,0,0)
+                        if this.deathsThisLevel == 0
+                            this.gameManager.starCount = this.gameManager.starCount + 1
+                            MAIN.scene.textBoxes[2].updateText(string(this.gameManager.starCount))
+                        end
                     end
                 end
             elseif otherCollider.tag == "Hazard"
-                this.hurtSound.toggleSound()
                 this.respawn()
+            elseif otherCollider.tag == "Star"
+                this.starSound.toggleSound()
+                DestroyEntity(otherCollider.parent)
+                this.gameManager.starCount = this.gameManager.starCount + 1
+                MAIN.scene.textBoxes[2].updateText(string(stars))
             end
         end
     elseif s == :respawn
         function()
+            this.hurtSound.toggleSound()
             this.parent.getTransform().position = Vector2f(1, 4)
-            MAIN.scene.textBoxes[2].updateText(string(parse(Int, MAIN.scene.textBoxes[2].text) - 1))
+            this.gameManager.starCount = max(this.gameManager.starCount - 1, 0)
+            MAIN.scene.textBoxes[2].updateText(string(this.gameManager.starCount))
+            this.deathsThisLevel += 1
         end
     else
         getfield(this, s)

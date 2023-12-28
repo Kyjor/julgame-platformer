@@ -4,6 +4,7 @@ mutable struct GameManager
     currentLevel::Int32
     currentMusic::SoundSource
     soundBank
+    starCount::Int32
     parent
 
     function GameManager()
@@ -16,6 +17,7 @@ mutable struct GameManager
             "lava.wav",
             "strong-wind.wav",
         ]
+        this.starCount = 3
 
         return this
     end
@@ -28,7 +30,7 @@ function Base.getproperty(this::GameManager, s::Symbol)
             MAIN.cameraBackgroundColor = [30, 111, 80]
             MAIN.optimizeSpriteRendering = true
 
-            this.parent.addComponent(ShapeModule.Shape(Math.Vector2(10,5), Math.Vector3(0), true; isWorldEntity=false, position=Math.Vector2f(1.05,0.7)))
+            this.parent.addComponent(ShapeModule.Shape(Math.Vector2(10,5), Math.Vector3(0), true; isWorldEntity=false, position=Math.Vector2f(1.2175,0.5)))
             coinUI = MAIN.scene.getEntityByName("CoinUI")
             livesUI = MAIN.scene.getEntityByName("LivesUI")
 
@@ -47,6 +49,8 @@ function Base.getproperty(this::GameManager, s::Symbol)
 
             this.currentMusic = SoundSource(this.soundBank[this.currentLevel], 25)
             this.currentMusic.toggleSound()
+
+            MAIN.scene.textBoxes[2].updateText(string(this.starCount))
         end
     elseif s == :update
         function(deltaTime)

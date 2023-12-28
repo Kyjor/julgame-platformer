@@ -159,11 +159,11 @@
                     "tag": "Default",
                     "offset": {
                         "x": 0,
-                        "y": 0
+                        "y": 0.125
                     },
                     "size": {
-                        "x": 1,
-                        "y": 1
+                        "x": 0.75,
+                        "y": 0.75
                     },
                     "type": "Collider",
                     "isPlatformerCollider": false,
@@ -12125,7 +12125,7 @@
             },
             "isDefaultFont": true,
             "isCenteredY": false,
-            "fontPath": "FiraCode//ttf//FiraCode-Medium.ttf",
+            "fontPath": "Round9x13.ttf",
             "text": "0/17"
         },
         {
@@ -12146,7 +12146,7 @@
             },
             "isDefaultFont": true,
             "isCenteredY": false,
-            "fontPath": "FiraCode//ttf//FiraCode-Medium.ttf",
+            "fontPath": "Round9x13.ttf",
             "text": "3"
         }
     ]

@@ -20,8 +20,8 @@
                     },
                     "type": "Transform",
                     "scale": {
-                        "x": 1.75,
-                        "y": 1.5
+                        "x": 2.15,
+                        "y": 1.75
                     }
                 }
             ]
@@ -109,11 +109,11 @@
                     "tag": "Default",
                     "offset": {
                         "x": 0,
-                        "y": 0
+                        "y": 0.125
                     },
                     "size": {
-                        "x": 1,
-                        "y": 1
+                        "x": 0.75,
+                        "y": 0.75
                     },
                     "type": "Collider",
                     "isPlatformerCollider": false,
@@ -14673,7 +14673,7 @@
         },
         {
             "isActive": true,
-            "name": "Coin",
+            "name": "Star",
             "scripts": [
             ],
             "id": 344,
@@ -14681,8 +14681,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 4,
-                        "y": 3
+                        "x": 79,
+                        "y": 2
                     },
                     "type": "Transform",
                     "scale": {
@@ -14699,11 +14699,11 @@
                         "y": 0
                     },
                     "type": "Sprite",
-                    "imagePath": "Coin.png",
+                    "imagePath": "Star_Red.png",
                     "isFlipped": false
                 },
                 {
-                    "tag": "Coin",
+                    "tag": "Star",
                     "offset": {
                         "x": 0,
                         "y": 0
@@ -14832,7 +14832,7 @@
                     }
                 },
                 {
-                    "layer": 0,
+                    "layer": 3,
                     "crop": {
                         "w": 16,
                         "x": 0,
@@ -16264,7 +16264,7 @@
                     }
                 },
                 {
-                    "layer": 0,
+                    "layer": 3,
                     "crop": {
                         "w": 16,
                         "x": 0,
@@ -16310,6 +16310,147 @@
                 },
                 {
                     "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 370,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 4,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Star",
+            "scripts": [
+            ],
+            "id": 371,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 11,
+                        "y": -2
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Star_Red.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Star",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Star",
+            "scripts": [
+            ],
+            "id": 372,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 63,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Star_Red.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Star",
                     "offset": {
                         "x": 0,
                         "y": 0
