@@ -2,32 +2,6 @@
     "Entities": [
         {
             "isActive": true,
-            "name": "Game Manager",
-            "scripts": [
-                {
-                    "name": "GameManager",
-                    "parameters": [
-                    ]
-                }
-            ],
-            "id": 1,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1.75,
-                        "y": 1.5
-                    }
-                }
-            ]
-        },
-        {
-            "isActive": true,
             "name": "Background",
             "scripts": [
                 {

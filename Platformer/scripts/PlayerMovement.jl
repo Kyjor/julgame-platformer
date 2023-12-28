@@ -12,6 +12,7 @@ mutable struct PlayerMovement
     cameraTarget
     canMove
     coinSound
+    gameManager
     input
     isFacingRight
     isJump 
@@ -44,14 +45,17 @@ end
 function Base.getproperty(this::PlayerMovement, s::Symbol)
     if s == :initialize
         function()
-            event = @event begin
-                #this.jump()
-            end
             this.animator = this.parent.getAnimator()
             this.animator.currentAnimation = this.animator.animations[1]
             this.jumpSound = this.parent.getSoundSource()
             this.cameraTarget = Transform(Vector2f(this.parent.getTransform().position.x, 0))
             MAIN.scene.camera.target = this.cameraTarget
+            for entity in MAIN.scene.entities
+                if entity.name == "Game Manager"
+                    println("found game manager")
+                end
+            end
+            this.gameManager = MAIN.scene.getEntityByName("Game Manager").scripts[1]
         end
     elseif s == :update
         function(deltaTime)
@@ -106,22 +110,31 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
     elseif s == :setParent
         function(parent)
             this.parent = parent
-            collisionEvent = @event begin
-                this.handleCollisions()
-            end
+            collisionEvent = @argevent (col) this.handleCollisions(col)
             this.parent.getComponent(Collider).addCollisionEvent(collisionEvent)
         end
     elseif s == :handleCollisions
-        function()
-            collider = this.parent.getComponent(Collider)
-            for collision in collider.currentCollisions
-                if collision.tag == "Coin"
-                    DestroyEntity(collision.parent)
-                    this.coinSound.toggleSound()
-                    MAIN.scene.textBoxes[1].updateText(string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
-                elseif collision.tag == "Hazard"
-                    this.respawn()
+        function(otherCollider)
+            if otherCollider.tag == "Coin"
+                DestroyEntity(otherCollider.parent)
+                this.coinSound.toggleSound()
+                MAIN.scene.textBoxes[1].updateText(string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
+                if parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) == parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])
+                    if this.gameManager.currentLevel == 1
+                        this.gameManager.currentLevel = 2
+                        ChangeScene("level_2.json")
+                    elseif this.gameManager.currentLevel == 2
+                        this.gameManager.currentLevel = 3
+                        ChangeScene("level_3.json")
+                    else 
+                        # you win text
+                        MAIN.scene.textBoxes[1].isCenteredX, MAIN.scene.textBoxes[1].isCenteredY = true, true
+                        MAIN.scene.textBoxes[1].updateText("You Win!")
+                        MAIN.scene.textBoxes[1].setColor(0,0,0)
+                    end
                 end
+            elseif otherCollider.tag == "Hazard"
+                #this.respawn()
             end
         end
     elseif s == :respawn

@@ -1,11 +1,13 @@
 using JulGame.MainLoop 
 
 mutable struct GameManager
+    currentLevel::Int32
     parent
 
     function GameManager()
         this = new()
 
+        this.currentLevel = 1
         this.parent = C_NULL
 
         return this
@@ -20,10 +22,18 @@ function Base.getproperty(this::GameManager, s::Symbol)
             MAIN.optimizeSpriteRendering = true
 
             this.parent.addComponent(ShapeModule.Shape(Math.Vector2(10,5), Math.Vector3(0), true; isWorldEntity=false, position=Math.Vector2f(1.05,0.7)))
-            MAIN.scene.getEntityByName("CoinUI").getSprite().isWorldEntity = false
-            MAIN.scene.getEntityByName("CoinUI").getSprite().position = JulGame.Math.Vector2f(-.1, 1)
-            MAIN.scene.getEntityByName("LivesUI").getSprite().isWorldEntity = false
-            MAIN.scene.getEntityByName("LivesUI").getSprite().position = JulGame.Math.Vector2f(-.1, .25)
+            coinUI = MAIN.scene.getEntityByName("CoinUI")
+            livesUI = MAIN.scene.getEntityByName("LivesUI")
+
+            coinUI.persistentBetweenScenes = true
+            coinUI.getSprite().isWorldEntity = false
+            coinUI.getSprite().position = JulGame.Math.Vector2f(-.1, 1)
+
+            livesUI.persistentBetweenScenes = true
+            livesUI.getSprite().isWorldEntity = false
+            livesUI.getSprite().position = JulGame.Math.Vector2f(-.1, .25)
+            
+            this.parent.persistentBetweenScenes = true
         end
     elseif s == :update
         function(deltaTime)

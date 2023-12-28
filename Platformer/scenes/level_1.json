@@ -14587,8 +14587,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 14,
-                        "y": 0
+                        "x": 21,
+                        "y": 4
                     },
                     "type": "Transform",
                     "scale": {
@@ -14681,8 +14681,8 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 11,
-                        "y": -2
+                        "x": 4,
+                        "y": 3
                     },
                     "type": "Transform",
                     "scale": {
@@ -14996,53 +14996,6 @@
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 66,
-                        "y": 4
-                    },
-                    "type": "Transform",
-                    "scale": {
-                        "x": 1,
-                        "y": 1
-                    }
-                },
-                {
-                    "layer": 2,
-                    "crop": {
-                        "w": 16,
-                        "x": 0,
-                        "h": 16,
-                        "y": 0
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Coin.png",
-                    "isFlipped": false
-                },
-                {
-                    "tag": "Coin",
-                    "offset": {
-                        "x": 0,
-                        "y": 0
-                    },
-                    "size": {
-                        "x": 1,
-                        "y": 1
-                    },
-                    "type": "Collider",
-                    "isPlatformerCollider": false,
-                    "isTrigger": true
-                }
-            ]
-        },
-        {
-            "isActive": true,
-            "name": "Coin",
-            "scripts": [
-            ],
-            "id": 352,
-            "components": [
-                {
-                    "rotation": 0,
-                    "position": {
                         "x": 62,
                         "y": 1
                     },
@@ -15085,7 +15038,7 @@
             "name": "Coin",
             "scripts": [
             ],
-            "id": 353,
+            "id": 352,
             "components": [
                 {
                     "rotation": 0,
@@ -15132,7 +15085,7 @@
             "name": "Coin",
             "scripts": [
             ],
-            "id": 354,
+            "id": 353,
             "components": [
                 {
                     "rotation": 0,
@@ -15187,7 +15140,7 @@
                     ]
                 }
             ],
-            "id": 355,
+            "id": 354,
             "components": [
                 {
                     "rotation": 0,
@@ -15273,7 +15226,7 @@
                     ]
                 }
             ],
-            "id": 356,
+            "id": 355,
             "components": [
                 {
                     "rotation": 0,
@@ -15365,7 +15318,7 @@
                     ]
                 }
             ],
-            "id": 357,
+            "id": 356,
             "components": [
                 {
                     "rotation": 0,
@@ -15457,7 +15410,7 @@
                     ]
                 }
             ],
-            "id": 358,
+            "id": 357,
             "components": [
                 {
                     "rotation": 0,
@@ -15544,17 +15497,17 @@
                     "name": "Spider",
                     "parameters": [
                         "2",
-                        "27",
-                        "30"
+                        "31",
+                        "35"
                     ]
                 }
             ],
-            "id": 359,
+            "id": 358,
             "components": [
                 {
                     "rotation": 0,
                     "position": {
-                        "x": 29,
+                        "x": 33,
                         "y": 4
                     },
                     "type": "Transform",
@@ -15633,7 +15586,7 @@
             "name": "Coin",
             "scripts": [
             ],
-            "id": 360,
+            "id": 359,
             "components": [
                 {
                     "rotation": 0,
@@ -15680,7 +15633,7 @@
             "name": "Coin",
             "scripts": [
             ],
-            "id": 361,
+            "id": 360,
             "components": [
                 {
                     "rotation": 0,
@@ -15735,7 +15688,7 @@
                     ]
                 }
             ],
-            "id": 362,
+            "id": 361,
             "components": [
                 {
                     "rotation": 0,
@@ -15827,7 +15780,7 @@
                     ]
                 }
             ],
-            "id": 363,
+            "id": 362,
             "components": [
                 {
                     "rotation": 0,
@@ -15913,7 +15866,7 @@
                     ]
                 }
             ],
-            "id": 364,
+            "id": 363,
             "components": [
                 {
                     "rotation": 0,
@@ -15999,7 +15952,7 @@
                     ]
                 }
             ],
-            "id": 365,
+            "id": 364,
             "components": [
                 {
                     "rotation": 0,
@@ -16085,7 +16038,7 @@
                     ]
                 }
             ],
-            "id": 366,
+            "id": 365,
             "components": [
                 {
                     "rotation": 0,
@@ -16171,7 +16124,7 @@
                     ]
                 }
             ],
-            "id": 367,
+            "id": 366,
             "components": [
                 {
                     "rotation": 0,
@@ -16249,7 +16202,7 @@
             "name": "Coin",
             "scripts": [
             ],
-            "id": 368,
+            "id": 367,
             "components": [
                 {
                     "rotation": 0,
@@ -16296,7 +16249,7 @@
             "name": "LivesUI",
             "scripts": [
             ],
-            "id": 369,
+            "id": 368,
             "components": [
                 {
                     "rotation": 0,
@@ -16321,6 +16274,53 @@
                     "type": "Sprite",
                     "imagePath": "Stars_Ui.png",
                     "isFlipped": false
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Coin",
+            "scripts": [
+            ],
+            "id": 369,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 14,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 0,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Coin.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Coin",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
                 }
             ]
         }
