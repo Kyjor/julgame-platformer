@@ -503,6 +503,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -6692,6 +6696,10 @@
                 {
                     "layer": 0,
                     "crop": {
+                        "w": 0,
+                        "x": 0,
+                        "h": 0,
+                        "y": 0
                     },
                     "type": "Sprite",
                     "imagePath": "Bridge.png",
@@ -11547,10 +11555,57 @@
         },
         {
             "isActive": true,
-            "name": "LivesUI",
+            "name": "Star",
             "scripts": [
             ],
             "id": 245,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 64,
+                        "y": 3
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Star_Red.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Star",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "LivesUI",
+            "scripts": [
+            ],
+            "id": 246,
             "components": [
                 {
                     "rotation": 0,
@@ -11583,7 +11638,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 246,
+            "id": 247,
             "components": [
                 {
                     "rotation": 0,
@@ -11630,7 +11685,7 @@
             "name": "Grass Rock Tile Left End",
             "scripts": [
             ],
-            "id": 247,
+            "id": 248,
             "components": [
                 {
                     "rotation": 0,
@@ -11677,7 +11732,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 248,
+            "id": 249,
             "components": [
                 {
                     "rotation": 0,
@@ -11710,7 +11765,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 249,
+            "id": 250,
             "components": [
                 {
                     "rotation": 0,
@@ -11743,7 +11798,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 250,
+            "id": 251,
             "components": [
                 {
                     "rotation": 0,
@@ -11790,7 +11845,7 @@
             "name": "Grass Rock Tile Left End",
             "scripts": [
             ],
-            "id": 251,
+            "id": 252,
             "components": [
                 {
                     "rotation": 0,
@@ -11837,7 +11892,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 252,
+            "id": 253,
             "components": [
                 {
                     "rotation": 0,
@@ -11870,7 +11925,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 253,
+            "id": 254,
             "components": [
                 {
                     "rotation": 0,
@@ -11903,7 +11958,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 254,
+            "id": 255,
             "components": [
                 {
                     "rotation": 0,
@@ -11950,7 +12005,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 255,
+            "id": 256,
             "components": [
                 {
                     "rotation": 0,
@@ -11997,7 +12052,7 @@
             "name": "Grass Rock Tile Left End",
             "scripts": [
             ],
-            "id": 256,
+            "id": 257,
             "components": [
                 {
                     "rotation": 0,
@@ -12044,7 +12099,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 257,
+            "id": 258,
             "components": [
                 {
                     "rotation": 0,
@@ -12077,7 +12132,7 @@
             "name": "Grass Rock Tile",
             "scripts": [
             ],
-            "id": 258,
+            "id": 259,
             "components": [
                 {
                     "rotation": 0,
@@ -12104,6 +12159,100 @@
                     "isFlipped": false
                 }
             ]
+        },
+        {
+            "isActive": true,
+            "name": "Star",
+            "scripts": [
+            ],
+            "id": 260,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 28,
+                        "y": 0
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Star_Red.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Star",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
+        },
+        {
+            "isActive": true,
+            "name": "Star",
+            "scripts": [
+            ],
+            "id": 261,
+            "components": [
+                {
+                    "rotation": 0,
+                    "position": {
+                        "x": 44,
+                        "y": 4
+                    },
+                    "type": "Transform",
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    }
+                },
+                {
+                    "layer": 2,
+                    "crop": {
+                        "w": 16,
+                        "x": 0,
+                        "h": 16,
+                        "y": 0
+                    },
+                    "type": "Sprite",
+                    "imagePath": "Star_Red.png",
+                    "isFlipped": false
+                },
+                {
+                    "tag": "Star",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 1,
+                        "y": 1
+                    },
+                    "type": "Collider",
+                    "isPlatformerCollider": false,
+                    "isTrigger": true
+                }
+            ]
         }
     ],
     "TextBoxes": [
@@ -12125,7 +12274,7 @@
             },
             "isDefaultFont": true,
             "isCenteredY": false,
-            "fontPath": "Round9x13.ttf",
+            "fontPath": "FiraCode//ttf//FiraCode-Medium.ttf",
             "text": "0/17"
         },
         {
@@ -12146,7 +12295,7 @@
             },
             "isDefaultFont": true,
             "isCenteredY": false,
-            "fontPath": "Round9x13.ttf",
+            "fontPath": "FiraCode//ttf//FiraCode-Medium.ttf",
             "text": "3"
         }
     ]

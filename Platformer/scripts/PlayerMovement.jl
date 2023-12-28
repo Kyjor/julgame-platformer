@@ -121,7 +121,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 DestroyEntity(otherCollider.parent)
                 this.coinSound.toggleSound()
                 MAIN.scene.textBoxes[1].updateText(string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
-                if parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) == 1#parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])
+                if parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) == parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])
                     if this.gameManager.currentLevel == 1
                         if this.deathsThisLevel == 0
                             this.gameManager.starCount = this.gameManager.starCount + 1
@@ -151,7 +151,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 this.starSound.toggleSound()
                 DestroyEntity(otherCollider.parent)
                 this.gameManager.starCount = this.gameManager.starCount + 1
-                MAIN.scene.textBoxes[2].updateText(string(stars))
+                MAIN.scene.textBoxes[2].updateText(string(this.gameManager.starCount))
             end
         end
     elseif s == :respawn
