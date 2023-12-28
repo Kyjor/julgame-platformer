@@ -1,9 +1,7 @@
 name = "Platformer"
-uuid = "8ca9f114-4b7e-11ee-be56-0242ac120002"
+uuid = "2f9ff75c-c52e-4230-a672-d22cf9c6b914"
 authors = ["Kyjor <kyjordev@gmail.com>"]
-version = "0.0.1"
+version = "1.0.0"
 
 [deps]
 JulGame = "4850f9bb-d191-4a1e-9f97-ee64062927c3"
-HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"
-JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
