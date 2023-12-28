@@ -13,6 +13,7 @@ mutable struct PlayerMovement
     canMove
     coinSound
     gameManager
+    hurtSound
     input
     isFacingRight
     isJump 
@@ -32,6 +33,7 @@ mutable struct PlayerMovement
         this.isJump = false
         this.parent = C_NULL
         this.coinSound = SoundSource("coin.wav", 1, 50)
+        this.hurtSound = SoundSource("hit.wav", 1, 50)
         this.jumpSound = C_NULL 
         this.jumpVelocity = typeof(jumpVelocity) === Float64 ? jumpVelocity : parse(Float64, jumpVelocity)
 
@@ -50,11 +52,6 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.jumpSound = this.parent.getSoundSource()
             this.cameraTarget = Transform(Vector2f(this.parent.getTransform().position.x, 0))
             MAIN.scene.camera.target = this.cameraTarget
-            for entity in MAIN.scene.entities
-                if entity.name == "Game Manager"
-                    println("found game manager")
-                end
-            end
             this.gameManager = MAIN.scene.getEntityByName("Game Manager").scripts[1]
         end
     elseif s == :update
@@ -72,9 +69,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 AddVelocity(this.parent.getRigidbody(), Vector2f(0, this.jumpVelocity))
                 this.animator.currentAnimation = this.animator.animations[3]
             end
-            if (input.getButtonHeldDown("A") || input.xDir == -1) && this.canMove
-                if input.getButtonPressed("A")
-                end
+            if (input.getButtonHeldDown("A") || input.getButtonHeldDown("LEFT") || input.xDir == -1) && this.canMove
                 x = -speed
                 if this.parent.getRigidbody().grounded
                     this.animator.currentAnimation = this.animator.animations[2]
@@ -83,9 +78,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     this.isFacingRight = false
                     this.parent.getSprite().flip()
                 end
-            elseif (input.getButtonHeldDown("D")  || input.xDir == 1) && this.canMove
-                if input.getButtonPressed("D")
-                end
+            elseif (input.getButtonHeldDown("D")  || input.getButtonHeldDown("RIGHT") || input.xDir == 1) && this.canMove
                 if this.parent.getRigidbody().grounded
                     this.animator.currentAnimation = this.animator.animations[2]
                 end
@@ -105,7 +98,12 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 this.respawn()
             end
 
-            this.cameraTarget.position = Vector2f(this.parent.getTransform().position.x, 2.75)
+            speed = abs(5 * (1 - cos(this.parent.getTransform().position.x- this.cameraTarget.position.x)))
+            speed = clamp(speed, 1, 5)
+            if this.cameraTarget.position != Vector2f(this.parent.getTransform().position.x, 2.75)
+                this.cameraTarget.position = Vector2f(this.cameraTarget.position.x + (this.parent.getTransform().position.x - this.cameraTarget.position.x) * deltaTime  * speed, 2.75)
+            end
+            
         end
     elseif s == :setParent
         function(parent)
@@ -134,7 +132,8 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     end
                 end
             elseif otherCollider.tag == "Hazard"
-                #this.respawn()
+                this.hurtSound.toggleSound()
+                this.respawn()
             end
         end
     elseif s == :respawn

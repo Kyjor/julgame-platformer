@@ -37,7 +37,7 @@ function Base.getproperty(this::Saw, s::Symbol)
     elseif s == :update
         function(deltaTime)
             this.rotation += 5
-            this.parent.getSprite().rotation =  this.rotation
+            this.parent.getSprite().rotation =  this.rotation % 360
 
             if this.parent.getTransform().position.y >= this.startingY && !this.isMovingUp
                 this.isMovingUp = true

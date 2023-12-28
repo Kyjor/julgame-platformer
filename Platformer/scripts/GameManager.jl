@@ -2,6 +2,8 @@ using JulGame.MainLoop
 
 mutable struct GameManager
     currentLevel::Int32
+    currentMusic::SoundSource
+    soundBank
     parent
 
     function GameManager()
@@ -9,6 +11,11 @@ mutable struct GameManager
 
         this.currentLevel = 1
         this.parent = C_NULL
+        this.soundBank = [
+            "water-ambience.mp3",
+            "lava.wav",
+            "strong-wind.wav",
+        ]
 
         return this
     end
@@ -34,6 +41,12 @@ function Base.getproperty(this::GameManager, s::Symbol)
             livesUI.getSprite().position = JulGame.Math.Vector2f(-.1, .25)
             
             this.parent.persistentBetweenScenes = true
+            if this.currentLevel > 1
+                this.currentMusic.unloadSound()
+            end
+
+            this.currentMusic = SoundSource(this.soundBank[this.currentLevel], 25)
+            this.currentMusic.toggleSound()
         end
     elseif s == :update
         function(deltaTime)
