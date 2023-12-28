@@ -1,4 +1,4 @@
-using JulGame.MainLoop 
+using JulGame 
 
 mutable struct Background
     parent
