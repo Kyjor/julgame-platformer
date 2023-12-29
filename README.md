@@ -12,3 +12,4 @@ I am using this video as a reference and using the assets from it: https://www.y
 
 ![image](https://github.com/Kyjor/julgame-platformer/assets/13784123/7b0ba9df-5b7d-4b9b-bf2a-d30b7324b9a6)
 
+If you want to build this yourself, it will work best with this version of JulGame: https://github.com/Kyjor/JulGame.jl/commit/924d08410ae07e1e2179574bad50a1cbc8be0098
