@@ -39,7 +39,7 @@ function Base.getproperty(this::Title, s::Symbol)
             end
 
             if MAIN.input.getButtonPressed("RETURN")
-                sound = this.parent.createSoundSource(JulGame.SoundSourceModule.SoundSource(-1, false, "confirm-ui.wav", 50))
+                sound = this.parent.createSoundSource(JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "confirm-ui.wav", Int32(50)))
                 sound.toggleSound()
                 ChangeScene("level_1.json")
             end
