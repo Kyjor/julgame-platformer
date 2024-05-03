@@ -26,7 +26,7 @@ mutable struct PlayerMovement
     xDir
     yDir
 
-    function PlayerMovement(jumpVelocity = -10)
+    function PlayerMovement(jumpVelocity = -10.0)
         this = new()
 
         this.canMove = false
@@ -121,7 +121,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             if otherCollider.tag == "Coin"
                 DestroyEntity(otherCollider.parent)
                 this.coinSound.toggleSound()
-                MAIN.scene.textBoxes[1].updateText(string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
+                JulGame.UI.update_text(MAIN.scene.textBoxes[1], string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
                 if parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) == parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])
                     if this.gameManager.currentLevel == 1
                         if this.deathsThisLevel == 0
@@ -138,11 +138,11 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                     else 
                         # you win text
                         MAIN.scene.textBoxes[1].isCenteredX, MAIN.scene.textBoxes[1].isCenteredY = true, true
-                        MAIN.scene.textBoxes[1].updateText("You Win!")
+                        JulGame.UI.update_text(MAIN.scene.textBoxes[1], "You Win!")
                         MAIN.scene.textBoxes[1].setColor(0,0,0)
                         if this.deathsThisLevel == 0
                             this.gameManager.starCount = this.gameManager.starCount + 1
-                            MAIN.scene.textBoxes[2].updateText(string(this.gameManager.starCount))
+                            JulGame.UI.update_text(MAIN.scene.textBoxes[2], string(this.gameManager.starCount))
                         end
                     end
                 end
@@ -152,7 +152,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 this.starSound.toggleSound()
                 DestroyEntity(otherCollider.parent)
                 this.gameManager.starCount = this.gameManager.starCount + 1
-                MAIN.scene.textBoxes[2].updateText(string(this.gameManager.starCount))
+                JulGame.UI.update_text(MAIN.scene.textBoxes[2], string(this.gameManager.starCount))
             end
         end
     elseif s == :respawn
@@ -160,7 +160,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.hurtSound.toggleSound()
             this.parent.transform.position = Vector2f(1, 4)
             this.gameManager.starCount = max(this.gameManager.starCount - 1, 0)
-            MAIN.scene.textBoxes[2].updateText(string(this.gameManager.starCount))
+            JulGame.UI.update_text(MAIN.scene.textBoxes[2], string(this.gameManager.starCount))
             this.deathsThisLevel += 1
         end
     else

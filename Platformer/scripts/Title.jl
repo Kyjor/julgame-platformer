@@ -26,13 +26,13 @@ function Base.getproperty(this::Title, s::Symbol)
 
             if this.fade 
                 this.textBox.alpha -= 1
-                this.textBox.updateText(this.textBox.text)
+                JulGame.UI.update_text(this.textBox, this.textBox.text)
                 if this.textBox.alpha <= 25
                     this.fade = false
                 end
             else
                 this.textBox.alpha += 1
-                this.textBox.updateText(this.textBox.text)
+                JulGame.UI.update_text(this.textBox, this.textBox.text)
                 if this.textBox.alpha >= 250
                     this.fade = true
                 end
@@ -41,7 +41,7 @@ function Base.getproperty(this::Title, s::Symbol)
             if MAIN.input.getButtonPressed("RETURN")
                 sound = this.parent.createSoundSource(JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "confirm-ui.wav", Int32(50)))
                 sound.toggleSound()
-                ChangeScene("level_1.json")
+                MainLoop.change_scene("level_1.json")
             end
 
         end
