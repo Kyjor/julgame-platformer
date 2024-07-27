@@ -29,6 +29,7 @@ mutable struct PlayerMovement
     function PlayerMovement(jumpVelocity = -10.0)
         this = new()
 
+        println(jumpVelocity)
         this.canMove = false
         this.input = C_NULL
         this.isFacingRight = true
@@ -119,30 +120,30 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
     elseif s == :handleCollisions
         function(otherCollider)
             if otherCollider.tag == "Coin"
-                DestroyEntity(otherCollider.parent)
+                destroy_entity(MAIN, otherCollider.parent)
                 this.coinSound.toggleSound()
-                JulGame.UI.update_text(MAIN.scene.textBoxes[1], string(parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])))
-                if parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[1]) == parse(Int, split(MAIN.scene.textBoxes[1].text, "/")[2])
+                JulGame.UI.update_text(MAIN.scene.uiElements[1], string(parse(Int, split(MAIN.scene.uiElements[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.uiElements[1].text, "/")[2])))
+                if parse(Int, split(MAIN.scene.uiElements[1].text, "/")[1]) == parse(Int, split(MAIN.scene.uiElements[1].text, "/")[2])
                     if this.gameManager.currentLevel == 1
                         if this.deathsThisLevel == 0
                             this.gameManager.starCount = this.gameManager.starCount + 1
                         end
                         this.gameManager.currentLevel = 2
-                        ChangeScene("level_2.json")
+                        MainLoop.change_scene("level_2.json")
                     elseif this.gameManager.currentLevel == 2
                         if this.deathsThisLevel == 0
                             this.gameManager.starCount = this.gameManager.starCount + 1
                         end
                         this.gameManager.currentLevel = 3
-                        ChangeScene("level_3.json")
+                        MainLoop.change_scene("level_3.json")
                     else 
                         # you win text
-                        MAIN.scene.textBoxes[1].isCenteredX, MAIN.scene.textBoxes[1].isCenteredY = true, true
-                        JulGame.UI.update_text(MAIN.scene.textBoxes[1], "You Win!")
-                        MAIN.scene.textBoxes[1].setColor(0,0,0)
+                        MAIN.scene.uiElements[1].isCenteredX, MAIN.scene.uiElements[1].isCenteredY = true, true
+                        JulGame.UI.update_text(MAIN.scene.uiElements[1], "You Win!")
+                        MAIN.scene.uiElements[1].setColor(0,0,0)
                         if this.deathsThisLevel == 0
                             this.gameManager.starCount = this.gameManager.starCount + 1
-                            JulGame.UI.update_text(MAIN.scene.textBoxes[2], string(this.gameManager.starCount))
+                            JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))
                         end
                     end
                 end
@@ -150,9 +151,9 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                 this.respawn()
             elseif otherCollider.tag == "Star"
                 this.starSound.toggleSound()
-                DestroyEntity(otherCollider.parent)
+                destroy_entity(MAIN, otherCollider.parent)
                 this.gameManager.starCount = this.gameManager.starCount + 1
-                JulGame.UI.update_text(MAIN.scene.textBoxes[2], string(this.gameManager.starCount))
+                JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))
             end
         end
     elseif s == :respawn
@@ -160,7 +161,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.hurtSound.toggleSound()
             this.parent.transform.position = Vector2f(1, 4)
             this.gameManager.starCount = max(this.gameManager.starCount - 1, 0)
-            JulGame.UI.update_text(MAIN.scene.textBoxes[2], string(this.gameManager.starCount))
+            JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))
             this.deathsThisLevel += 1
         end
     else

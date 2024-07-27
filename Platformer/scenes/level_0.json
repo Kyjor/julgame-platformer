@@ -13,7 +13,6 @@
             "id": 1,
             "components": [
                 {
-                    "rotation": 0,
                     "position": {
                         "x": 0,
                         "y": 0
@@ -35,6 +34,41 @@
             "components": [
                 {
                     "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 320,
+                        "y": 180
+                    },
+                    "imagePath": "Forest_Background_0.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
                     "position": {
                         "x": 9.5,
                         "y": 5
@@ -44,14 +78,6 @@
                         "x": 20,
                         "y": 11.25
                     }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Forest_Background_0.png",
-                    "isFlipped": false
                 }
             ]
         },
@@ -64,6 +90,41 @@
             "components": [
                 {
                     "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": -1,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 64,
+                        "y": 48
+                    },
+                    "imagePath": "Logo.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
                     "position": {
                         "x": 9,
                         "y": 2
@@ -73,14 +134,6 @@
                         "x": 8,
                         "y": 5
                     }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Logo.png",
-                    "isFlipped": false
                 }
             ]
         },
@@ -93,6 +146,41 @@
             "components": [
                 {
                     "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": 64,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 100,
+                        "y": 100
+                    },
+                    "imagePath": "Space_Key_Dark.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
                     "position": {
                         "x": 16,
                         "y": 9
@@ -102,14 +190,6 @@
                         "x": 2,
                         "y": 2
                     }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Space_Key_Dark.png",
-                    "isFlipped": false
                 }
             ]
         },
@@ -122,6 +202,41 @@
             "components": [
                 {
                     "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": 80,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 100,
+                        "y": 100
+                    },
+                    "imagePath": "Arrow_Up_Key_Dark.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
                     "position": {
                         "x": 16,
                         "y": 7
@@ -131,14 +246,6 @@
                         "x": 1,
                         "y": 1
                     }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Arrow_Up_Key_Dark.png",
-                    "isFlipped": false
                 }
             ]
         },
@@ -151,6 +258,41 @@
             "components": [
                 {
                     "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": 80,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 100,
+                        "y": 100
+                    },
+                    "imagePath": "Arrow_Down_Key_Dark.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
                     "position": {
                         "x": 16,
                         "y": 8
@@ -160,14 +302,6 @@
                         "x": 1,
                         "y": 1
                     }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Arrow_Down_Key_Dark.png",
-                    "isFlipped": false
                 }
             ]
         },
@@ -180,6 +314,41 @@
             "components": [
                 {
                     "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": 80,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 100,
+                        "y": 100
+                    },
+                    "imagePath": "Arrow_Left_Key_Dark.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
                     "position": {
                         "x": 15,
                         "y": 8
@@ -189,26 +358,53 @@
                         "x": 1,
                         "y": 1
                     }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Arrow_Left_Key_Dark.png",
-                    "isFlipped": false
                 }
             ]
         },
         {
             "isActive": true,
-            "name": "ArrowKeyUp",
+            "name": "ArrowKeyRight",
             "scripts": [
             ],
             "id": 8,
             "components": [
                 {
                     "rotation": 0,
+                    "crop": {
+                        "t": 0,
+                        "x": 0,
+                        "z": 0,
+                        "y": 0
+                    },
+                    "isFlipped": false,
+                    "layer": 0,
+                    "isWorldEntity": true,
+                    "position": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "pixelsPerUnit": 80,
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "center": {
+                        "x": 0,
+                        "y": 0
+                    },
+                    "size": {
+                        "x": 100,
+                        "y": 100
+                    },
+                    "imagePath": "Arrow_Right_Key_Dark.png",
+                    "color": {
+                        "x": 255,
+                        "z": 255,
+                        "y": 255
+                    },
+                    "type": "Sprite"
+                },
+                {
                     "position": {
                         "x": 17,
                         "y": 8
@@ -218,43 +414,33 @@
                         "x": 1,
                         "y": 1
                     }
-                },
-                {
-                    "layer": 0,
-                    "crop": {
-                    },
-                    "type": "Sprite",
-                    "imagePath": "Arrow_Right_Key_Dark.png",
-                    "isFlipped": false
                 }
             ]
         }
     ],
     "UIElements": [
         {
-            "type": "TextBox",
             "fontSize": 40,
             "name": "TextBox",
             "id": 1,
             "isWorldEntity": false,
             "position": {
-                "x": 76,
-                "y": 376
+                "x": 98,
+                "y": 381
             },
+            "persistentBetweenScenes": false,
             "isCenteredX": true,
             "alpha": 255,
-            "isTextUpdated": false,
             "size": {
-                "x": 648,
-                "y": 48
+                "x": 603,
+                "y": 38
             },
-            "isDefaultFont": true,
             "isCenteredY": true,
             "fontPath": "Round9x13.ttf",
-            "text": "Press [ENTER] To Start Game"
+            "text": "Press [ENTER] To Start Game",
+            "type": "TextBox"
         },
         {
-            "type": "TextBox",
             "fontSize": 40,
             "name": "TextBox",
             "id": 2,
@@ -263,39 +449,38 @@
                 "x": 850,
                 "y": 525
             },
+            "persistentBetweenScenes": false,
             "isCenteredX": false,
             "alpha": 255,
-            "isTextUpdated": false,
             "size": {
-                "x": 96,
-                "y": 48
+                "x": 100,
+                "y": 38
             },
-            "isDefaultFont": true,
             "isCenteredY": false,
             "fontPath": "Round9x13.ttf",
-            "text": "Move"
+            "text": "Move",
+            "type": "TextBox"
         },
         {
-            "type": "TextBox",
             "fontSize": 40,
             "name": "TextBox",
-            "id": 2,
+            "id": 3,
             "isWorldEntity": false,
             "position": {
                 "x": 850,
                 "y": 595
             },
+            "persistentBetweenScenes": false,
             "isCenteredX": false,
             "alpha": 255,
-            "isTextUpdated": false,
             "size": {
-                "x": 96,
-                "y": 48
+                "x": 100,
+                "y": 38
             },
-            "isDefaultFont": true,
             "isCenteredY": false,
             "fontPath": "Round9x13.ttf",
-            "text": "Jump"
+            "text": "Jump",
+            "type": "TextBox"
         }
     ]
 }
