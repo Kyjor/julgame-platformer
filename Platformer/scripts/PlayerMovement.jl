@@ -3,7 +3,7 @@ using JulGame.AnimatorModule
 using JulGame.RigidbodyModule
 using JulGame.Macros
 using JulGame.Math
-using JulGame.MainLoop
+using JulGame.JulGame.MainLoop
 using JulGame.SoundSourceModule
 using JulGame.TransformModule
 
@@ -51,13 +51,13 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             this.animator = this.parent.animator
             this.animator.currentAnimation = this.animator.animations[1]
             this.jumpSound = this.parent.soundSource
-            this.cameraTarget = Transform(Vector2f(this.parent.transform.position.x, 0))
+            this.cameraTarget = JulGame.TransformModule.Transform(Vector2f(this.parent.transform.position.x, 0))
             MAIN.scene.camera.target = this.cameraTarget
-            this.gameManager = MAIN.scene.getEntityByName("Game Manager").scripts[1]
+            this.gameManager = JulGame.SceneModule.get_entity_by_name(MAIN.scene, "Game Manager").scripts[1]
             this.deathsThisLevel = 0
-            this.coinSound = this.parent.createSoundSource(SoundSource(Int32(-1), false, "coin.wav", Int32(50)))
-            this.hurtSound = this.parent.createSoundSource(SoundSource(Int32(-1), false, "hit.wav", Int32(50)))
-            this.starSound = this.parent.createSoundSource(SoundSource(Int32(-1), false, "power-up.wav", Int32(50)))
+            this.coinSound = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "coin.wav", Int32(50)))
+            this.hurtSound = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "hit.wav", Int32(50)))
+            this.starSound = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "power-up.wav", Int32(50)))
         end
     elseif s == :update
         function(deltaTime)
@@ -69,35 +69,35 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
             # https://wiki.libsdl.org/SDL2/SDL_Scancode
             # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
-            if ((input.getButtonPressed("SPACE")  || input.button == 1)|| this.isJump) && this.parent.rigidbody.grounded && this.canMove 
-                this.jumpSound.toggleSound()
-                SetVelocity(this.parent.rigidbody, Vector2f(this.parent.rigidbody.getVelocity().x, 0))
-                AddVelocity(this.parent.rigidbody, Vector2f(0, this.jumpVelocity))
+            if ((JulGame.InputModule.get_button_pressed(input, "SPACE")  || input.button == 1)|| this.isJump) && this.parent.rigidbody.grounded && this.canMove 
+                JulGame.Component.toggle_sound(this.jumpSound)
+                JulGame.RigidbodyModule.SetVelocity(this.parent.rigidbody, Vector2f(JulGame.Component.get_velocity(this.parent.rigidbody).x, 0))
+                JulGame.RigidbodyModule.AddVelocity(this.parent.rigidbody, Vector2f(0, this.jumpVelocity))
                 this.animator.currentAnimation = this.animator.animations[3]
             end
-            if (input.getButtonHeldDown("A") || input.getButtonHeldDown("LEFT") || input.xDir == -1) && this.canMove
+            if (JulGame.InputModule.get_button_held_down(input, "A") || JulGame.InputModule.get_button_held_down(input, "LEFT") || input.xDir == -1) && this.canMove
                 x = -speed
                 if this.parent.rigidbody.grounded
                     this.animator.currentAnimation = this.animator.animations[2]
                 end
                 if this.isFacingRight
                     this.isFacingRight = false
-                    this.parent.sprite.flip()
+                    JulGame.Component.flip(this.parent.sprite)
                 end
-            elseif (input.getButtonHeldDown("D")  || input.getButtonHeldDown("RIGHT") || input.xDir == 1) && this.canMove
+            elseif (JulGame.InputModule.get_button_held_down(input, "D")  || JulGame.InputModule.get_button_held_down(input, "RIGHT") || input.xDir == 1) && this.canMove
                 if this.parent.rigidbody.grounded
                     this.animator.currentAnimation = this.animator.animations[2]
                 end
                 x = speed
                 if !this.isFacingRight
                     this.isFacingRight = true
-                    this.parent.sprite.flip()
+                    JulGame.Component.flip(this.parent.sprite)
                 end
             elseif this.parent.rigidbody.grounded
                 this.animator.currentAnimation = this.animator.animations[1]
             end
             
-            SetVelocity(this.parent.rigidbody, Vector2f(x, this.parent.rigidbody.getVelocity().y))
+            JulGame.RigidbodyModule.SetVelocity(this.parent.rigidbody, Vector2f(x, JulGame.Component.get_velocity(this.parent.rigidbody).y))
             x = 0
             this.isJump = false
             if this.parent.transform.position.y > 8
@@ -114,14 +114,14 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
     elseif s == :setParent
         function(parent)
             this.parent = parent
-            collisionEvent = @argevent (col) this.handleCollisions(col)
-            this.parent.collider.addCollisionEvent(collisionEvent)
+            collisionEvent = JulGame.Macros.@argevent (col) this.handleCollisions(col)
+            JulGame.Component.add_collision_event(this.parent.collider, collisionEvent)
         end
     elseif s == :handleCollisions
         function(otherCollider)
             if otherCollider.tag == "Coin"
                 destroy_entity(MAIN, otherCollider.parent)
-                this.coinSound.toggleSound()
+                JulGame.Component.toggle_sound(this.coinSound)
                 JulGame.UI.update_text(MAIN.scene.uiElements[1], string(parse(Int, split(MAIN.scene.uiElements[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.uiElements[1].text, "/")[2])))
                 if parse(Int, split(MAIN.scene.uiElements[1].text, "/")[1]) == parse(Int, split(MAIN.scene.uiElements[1].text, "/")[2])
                     if this.gameManager.currentLevel == 1
@@ -129,18 +129,18 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
                             this.gameManager.starCount = this.gameManager.starCount + 1
                         end
                         this.gameManager.currentLevel = 2
-                        MainLoop.change_scene("level_2.json")
+                        JulGame.MainLoop.change_scene("level_2.json")
                     elseif this.gameManager.currentLevel == 2
                         if this.deathsThisLevel == 0
                             this.gameManager.starCount = this.gameManager.starCount + 1
                         end
                         this.gameManager.currentLevel = 3
-                        MainLoop.change_scene("level_3.json")
+                        JulGame.MainLoop.change_scene("level_3.json")
                     else 
                         # you win text
                         MAIN.scene.uiElements[1].isCenteredX, MAIN.scene.uiElements[1].isCenteredY = true, true
                         JulGame.UI.update_text(MAIN.scene.uiElements[1], "You Win!")
-                        MAIN.scene.uiElements[1].setColor(0,0,0)
+
                         if this.deathsThisLevel == 0
                             this.gameManager.starCount = this.gameManager.starCount + 1
                             JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))
@@ -150,7 +150,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
             elseif otherCollider.tag == "Hazard"
                 this.respawn()
             elseif otherCollider.tag == "Star"
-                this.starSound.toggleSound()
+                JulGame.Component.toggle_sound(this.starSound)
                 destroy_entity(MAIN, otherCollider.parent)
                 this.gameManager.starCount = this.gameManager.starCount + 1
                 JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))
@@ -158,7 +158,7 @@ function Base.getproperty(this::PlayerMovement, s::Symbol)
         end
     elseif s == :respawn
         function()
-            this.hurtSound.toggleSound()
+            JulGame.Component.toggle_sound(this.hurtSound)
             this.parent.transform.position = Vector2f(1, 4)
             this.gameManager.starCount = max(this.gameManager.starCount - 1, 0)
             JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))

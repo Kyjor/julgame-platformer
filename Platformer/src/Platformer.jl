@@ -6,8 +6,8 @@ module Platformer
     function run()
         JulGame.MAIN = JulGame.Main(Float64(1.0))
         JulGame.PIXELS_PER_UNIT = 16
-        scene = Scene("level_0.json")
-        return scene.init("JulGame Example", false, Vector2(),Vector2(1280, 720), true, 1.0, true, 60)
+        scene = SceneBuilderModule.Scene("level_0.json")
+        return SceneBuilderModule.load_and_prepare_scene(scene, "JulGame Example", false, Vector2(),Vector2(1280, 720), true, 1.0, true, 60)
     end
 
     julia_main() = run()

@@ -1,5 +1,3 @@
-using JulGame 
-
 mutable struct Title
     fade
     parent
@@ -38,10 +36,10 @@ function Base.getproperty(this::Title, s::Symbol)
                 end
             end
 
-            if MAIN.input.getButtonPressed("RETURN")
-                sound = this.parent.createSoundSource(JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "confirm-ui.wav", Int32(50)))
-                sound.toggleSound()
-                MainLoop.change_scene("level_1.json")
+            if JulGame.InputModule.get_button_pressed(MAIN.input, "RETURN")
+                sound = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "confirm-ui.wav", Int32(50)))
+                JulGame.Component.toggle_sound(sound)
+                JulGame.MainLoop.change_scene("level_1.json")
             end
 
         end
