@@ -1,0 +1,136 @@
+name: CI
+
+on:
+  push:
+
+  workflow_dispatch:
+
+  repository_dispatch:
+    types: [trigger-ci]
+  
+jobs:
+  test:
+    name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - '1.11'
+        os:
+          - ubuntu-latest
+          - macOS-latest
+          - windows-latest
+        arch:
+          - x64
+        exclude: # exclude mac and linux for now
+          - os: macOS-latest
+          - os: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      # - name: Setup Ubuntu Display (if applicable)
+      #   run: sudo apt-get install xvfb && Xvfb :99 &
+      #   if: matrix.os == 'ubuntu-latest'
+      # - name: Install PulseAudio on Ubuntu
+      #   if: matrix.os == 'ubuntu-latest'
+      #   run: |
+      #     sudo apt-get update
+      #     sudo apt-get install -y pulseaudio
+      #     pulseaudio --check || pulseaudio --start
+      #     pactl load-module module-null-sink sink_name=vspeaker sink_properties=device.description=virtual_speaker
+      #     pactl load-module module-remap-source master=vspeaker.monitor source_name=vmic source_properties=device.description=virtual_mic
+      # - name: Install BlackHole on macOS
+      #   if: matrix.os == 'macos-latest'
+      #   run: |
+      #     brew install blackhole-2ch
+      - name: Setup Ubuntu Display (if applicable)
+        run: sudo apt-get install xvfb && Xvfb :99 &
+        if: matrix.os == 'ubuntu-latest'
+      - name: Install PulseAudio on Ubuntu
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y pulseaudio
+          pulseaudio --check || pulseaudio --start
+          pactl load-module module-null-sink sink_name=vspeaker sink_properties=device.description=virtual_speaker
+          pactl load-module module-remap-source master=vspeaker.monitor source_name=vmic source_properties=device.description=virtual_mic
+      - name: Install BlackHole on macOS
+        if: matrix.os == 'macos-latest'
+        run: |
+          brew install blackhole-2ch
+      - name: Install Scream on Windows
+        if: matrix.os == 'windows-latest'
+        shell: powershell
+        run: |
+          Invoke-WebRequest https://github.com/duncanthrax/scream/releases/download/4.0/Scream4.0.zip -OutFile Scream4.0.zip
+          Expand-Archive -Path Scream4.0.zip -DestinationPath Scream
+          openssl req -batch -verbose -x509 -newkey rsa -keyout ScreamCertificate.pvk -out ScreamCertificate.cer -nodes -extensions v3_req
+          openssl pkcs12 -export -nodes -in ScreamCertificate.cer -inkey ScreamCertificate.pvk -out ScreamCertificate.pfx -passout pass:
+      - name: Setup MSVC Dev Cmd
+        if: matrix.os == 'windows-latest'
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Sign and Install Scream Driver on Windows
+        if: matrix.os == 'windows-latest'
+        shell: powershell
+        run: |
+          signtool sign /v /fd SHA256 /f ScreamCertificate.pfx Scream\Install\driver\x64\Scream.cat
+          Import-Certificate -FilePath ScreamCertificate.cer -CertStoreLocation Cert:\LocalMachine\root
+          Import-Certificate -FilePath ScreamCertificate.cer -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
+          Scream\Install\helpers\devcon-x64.exe install Scream\Install\driver\x64\Scream.inf *Scream
+        timeout-minutes: 5
+
+      - name: Start Windows Audio Service
+        if: matrix.os == 'windows-latest'
+        run: net start audiosrv
+        shell: powershell
+        continue-on-error: true
+
+      - name: Setup Julia
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: ${{ matrix.version }}
+          arch: ${{ matrix.arch }}
+      - uses: julia-actions/cache@v2
+      - name: Add JulGame.jl Dependency
+        working-directory: ./Platformer
+        run: julia -e 'using Pkg; Pkg.activate("."); Pkg.add(PackageSpec(url="https://github.com/Kyjor/JulGame.jl", rev="develop")); Pkg.add(PackageSpec(url="https://github.com/Kyjor/PackageCompiler.jl", rev="master"))'
+      - name: Build Julia Package
+        working-directory: ./Platformer
+        run: julia -e 'using Pkg; Pkg.activate("."); Pkg.build()'
+      - name: Run Tests and Build
+        working-directory: ./Platformer
+        env:
+          SHOULD_BUILD: true
+        run: julia -e 'using Pkg; Pkg.activate("."); Pkg.test()'
+      - name: Copy Config File to Build (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        run: cp ./Platformer/config.julgame ./Build
+      - name: Copy Config File to Build (Mac)
+        if: matrix.os == 'macOS-latest'
+        run: cp ./Platformer/config.julgame ./Build
+      - name: Copy Config File to Build (Windows)
+        if: matrix.os == 'windows-latest'
+        run: copy Platformer\config.julgame Build\config.julgame
+      - name: Zip Build Folder (Mac)
+        if: matrix.os == 'macOS-latest'
+        run: zip -r Build.zip Build
+      - name: Upload Artifact (Linux)
+        if: matrix.os == 'ubuntu-latest'
+        uses: actions/upload-artifact@v4
+        with:
+            name: Platformer-Linux
+            path: ./Build
+      - name: Upload Artifact (Mac)
+        if: matrix.os == 'macOS-latest'
+        uses: actions/upload-artifact@v4
+        with:
+            name: Platformer-Mac
+            path: ./Build
+      - name: Upload Artifact (Windows)
+        if: matrix.os == 'windows-latest' && github.ref_name == 'main'
+        uses: actions/upload-artifact@v4
+        with:
+            name: Platformer-Windows
+            path: ./Build

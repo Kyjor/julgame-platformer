@@ -1,0 +1,22 @@
+ERROR:
+MethodError(getindex, (nothing, 3), 0x00000000000068ca)
+
+Stacktrace:
+ [1] load_and_prepare_scene(this::JulGame.SceneManagement.SceneBuilderModule.Scene, main::JulGame.MainLoopModule.MainLoop; config::Dict{String, String}, windowName::String, isWindowResizable::Bool, preloadAllScenes::Bool)
+   @ JulGame.SceneManagement.SceneBuilderModule ~/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:126
+ [2] load_and_prepare_scene (repeats 2 times)
+   @ ~/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41 [inlined]
+ [3] run()
+   @ Main.Platformer ~/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+ [4] julia_main()
+   @ Main.Platformer ~/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+ [5] top-level scope
+   @ ~/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+ [6] include(mod::Module, _path::String)
+   @ Base ./Base.jl:562
+ [7] exec_options(opts::Base.JLOptions)
+   @ Base ./client.jl:323
+ [8] _start()
+   @ Base ./client.jl:531
+---
+

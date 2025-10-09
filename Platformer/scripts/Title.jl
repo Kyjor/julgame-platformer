@@ -1,60 +1,51 @@
-mutable struct Title
-    fade
-    parent
-    textBox
+module TitleModule
+    using JulGame
 
-    function Title()
-        this = new()
+    mutable struct Title
+        fade
+        parent
+        textBox
 
-        this.fade = true
-        this.parent = C_NULL
-        this.textBox = C_NULL
+        function Title()
+            this = new()
 
-        return this
-    end
-end
+            this.fade = true
+            this.parent = C_NULL
+            this.textBox = C_NULL
 
-function Base.getproperty(this::Title, s::Symbol)
-    if s == :initialize
-        function()
-            this.textBox = MAIN.scene.uiElements[1]
+            return this
         end
-    elseif s == :update
-        function(deltaTime)
+    end
 
+    function JulGame.initialize(this::Title)
+        this.textBox = MAIN.scene.uiElements[1]
+    end
+
+    function JulGame.update(this::Title, deltaTime)
+        try
             if this.fade 
-                this.textBox.alpha -= 1
-                JulGame.UI.update_text(this.textBox, this.textBox.text)
-                if this.textBox.alpha <= 25
+                this.textBox.color = (this.textBox.color[1], this.textBox.color[2], this.textBox.color[3], this.textBox.color[4] - 1)
+                this.textBox.text = this.textBox.text
+                if this.textBox.color[4] <= 25
                     this.fade = false
                 end
             else
-                this.textBox.alpha += 1
-                JulGame.UI.update_text(this.textBox, this.textBox.text)
-                if this.textBox.alpha >= 250
+                this.textBox.color = (this.textBox.color[1], this.textBox.color[2], this.textBox.color[3], this.textBox.color[4] + 1)
+                this.textBox.text = this.textBox.text
+                if this.textBox.color[4] >= 250
                     this.fade = true
                 end
             end
 
             if JulGame.InputModule.get_button_pressed(MAIN.input, "RETURN")
-                sound = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "confirm-ui.wav", Int32(50)))
-                JulGame.Component.toggle_sound(sound)
-                JulGame.MainLoop.change_scene("level_1.json")
+                JulGame.change_scene("level_1.json")
+                # sound = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "confirm-ui.wav", Int32(50)))
+                # JulGame.Component.toggle_sound(sound)
             end
-
-        end
-    elseif s == :setParent 
-        function(parent)
-            this.parent = parent
-        end
-    elseif s == :onShutDown
-        function ()
-        end
-    else
-        try
-            getfield(this, s)
         catch e
-            println(e)
+            @error string(e)
+            Base.show_backtrace(stdout, catch_backtrace())
+            rethrow(e)
         end
     end
-end
+end # module

@@ -107,7 +107,7 @@
                         "x": 0,
                         "y": 0
                     },
-                    "pixelsPerUnit": 0,
+                    "pixelsPerUnit": -1,
                     "offset": {
                         "x": 0,
                         "y": 0
@@ -137,7 +137,7 @@
                     "type": "Transform",
                     "scale": {
                         "x": 8,
-                        "y": 5
+                        "y": 5.000000000000001
                     }
                 }
             ],

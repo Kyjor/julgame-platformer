@@ -1,0 +1,728 @@
+ERROR:
+Error occurred: ErrorException("type TextBox has no field alpha")
+[1] getproperty at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/UI/UIElement.jl:60
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Title.jl:27
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[9] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[10] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[13] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[14] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:Vector2f, Main.Scripts.FishModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/Fish.jl:42
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:SetVelocity, JulGame.Component.RigidbodyModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:94
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:SetVelocity, JulGame.Component.RigidbodyModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:94
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:SetVelocity, JulGame.Component.RigidbodyModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:94
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:SetVelocity, JulGame.Component.RigidbodyModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:94
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:SetVelocity, JulGame.Component.RigidbodyModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:94
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefVarError(:SetVelocity, JulGame.Component.RigidbodyModule)
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:94
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: ErrorException("type PlayerMovement has no field respawn")
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: ErrorException("type PlayerMovement has no field respawn")
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: ErrorException("type PlayerMovement has no field respawn")
+[1] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[2] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[3] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[7] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[8] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[9] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[10] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[11] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[14] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[15] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:148
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:148
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:148
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:148
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:148
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:148
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:148
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:98
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:147
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:97
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:147
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:97
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:147
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:97
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:147
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:97
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:147
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:97
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:147
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:97
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:147
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:97
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
+ERROR:
+Error occurred: UndefRefError()
+[1] respawn at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:147
+[2] update at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/scripts/PlayerMovement.jl:97
+[3] update at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/Entity.jl:95
+[4] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:608
+[5] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[6] game_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:531
+[7] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:133
+[8] initialize_new_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:113
+[9] full_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:181
+[10] prepare_window_scripts_and_start_loop at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/MainLoop.jl:99
+[11] #load_and_prepare_scene#3 at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:169
+[12] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[13] load_and_prepare_scene at /home/kyjor/Documents/Projects/Julia/JulGame.jl/src/engine/SceneManagement/SceneBuilder.jl:41
+[14] run at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:85
+[15] julia_main at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Platformer.jl:96
+[16] top-level scope at /home/kyjor/Documents/Projects/Julia/julgame-platformer/Platformer/src/Run.jl:5
+
+
+---
+
