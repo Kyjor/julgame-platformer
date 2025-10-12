@@ -1,7 +1,7 @@
 module WaterModule
     using JulGame
 
-    mutable struct Water
+    mutable struct Water <: Script
         main
         offset
         parent

@@ -1,7 +1,7 @@
 module FishModule
     using JulGame
 
-    mutable struct Fish
+    mutable struct Fish <: Script
         animator
         endingY::Int32
         isFire::Bool

@@ -2,7 +2,7 @@ module PlayerMovementModule
     using JulGame
     include("Easings.jl")
 
-    mutable struct PlayerMovement
+    mutable struct PlayerMovement <: Script
         animator
         cameraTarget
         canMove
@@ -13,7 +13,7 @@ module PlayerMovementModule
         input
         isFacingRight
         isJump 
-        jumpVelocity::Float64
+        jumpVelocity::EditorExport{Float64}
         jumpSound
         parent
         starSound

@@ -1,7 +1,7 @@
 module BackgroundModule
     using JulGame
 
-    mutable struct Background
+    mutable struct Background <: Script
         parent
 
         function Background()

@@ -1,14 +1,14 @@
 module SpiderModule    
     using JulGame
 
-    mutable struct Spider
+    mutable struct Spider <: Script
         animator
-        endingX::Int
         isMovingRight::Bool
         parent::JulGame.EntityModule.Entity
         sound::JulGame.SoundSourceModule.SoundSource
-        speed::Number
-        startingX::Int
+        speed::EditorExport{Float64}
+        startingX::EditorExport{Int}
+        endingX::EditorExport{Int}
 
         function Spider()
             this = new()
@@ -16,6 +16,7 @@ module SpiderModule
             this.endingX = 0
             this.isMovingRight = false
             this.startingX = 0
+            this.speed = 0.0
 
             return this
         end

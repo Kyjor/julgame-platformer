@@ -1,7 +1,7 @@
 module SawModule
     using JulGame
 
-    mutable struct Saw
+    mutable struct Saw <: Script
         animator::AnimatorModule.Animator
         endingY::Float64
         isMovingUp::Bool

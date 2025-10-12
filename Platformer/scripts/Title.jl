@@ -1,7 +1,7 @@
 module TitleModule
     using JulGame
 
-    mutable struct Title
+    mutable struct Title <: Script
         fade
         parent
         textBox

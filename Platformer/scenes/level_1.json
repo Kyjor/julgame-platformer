@@ -97,6 +97,7 @@
                 {
                     "name": "PlayerMovement",
                     "fields": {
+                        "jumpVelocity": -7
                     }
                 }
             ],
