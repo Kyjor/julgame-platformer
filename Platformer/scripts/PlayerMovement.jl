@@ -17,6 +17,7 @@ module PlayerMovementModule
         jumpSound
         parent
         starSound
+        cameraOffsetY::EditorExport{Float64}
 
         xDir
         yDir
@@ -43,6 +44,7 @@ module PlayerMovementModule
             this.parent = C_NULL
             this.jumpSound = C_NULL 
             this.jumpVelocity = -10.0
+            this.cameraOffsetY = 2.0
 
             this.xDir = 0
             this.yDir = 0
@@ -67,11 +69,11 @@ module PlayerMovementModule
         this.animator = this.parent.animator
         this.animator.currentAnimation = this.animator.animations[1]
         this.jumpSound = this.parent.soundSource
-        this.cameraTarget = JulGame.TransformModule.Transform(Vector2f(this.parent.transform.position.x, 0))
+        this.cameraTarget = JulGame.TransformModule.Transform(Vector2f(this.parent.transform.position.x, this.cameraOffsetY))
         MAIN.scene.camera.target = this.cameraTarget
         this.cameraTargetX = this.parent.transform.position.x
         this.lastPlayerX = this.parent.transform.position.x
-        this.gameManager = JulGame.SceneModule.get_entity_by_name(MAIN.scene, "Game Manager").scripts[1]
+        this.gameManager = JulGame.SceneModule.get_entity_by_name("Game Manager").scripts[1]
         this.deathsThisLevel = 0
         # this.coinSound = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "coin.wav", Int32(50)))
         # this.hurtSound = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), false, "hit.wav", Int32(50)))
@@ -161,19 +163,19 @@ module PlayerMovementModule
             lerpFactor = min(deltaTime * this.cameraFollowSpeed, 1.0)
             easedLerp = ease_out_cubic(lerpFactor)
             newCameraX = currentCameraX + (this.cameraTargetX - currentCameraX) * easedLerp
-            this.cameraTarget.position = Vector2f(newCameraX, 4.75)
+            this.cameraTarget.position = Vector2f(newCameraX, this.cameraOffsetY)
         end
         
         # Update last player position for velocity calculation
         this.lastPlayerX = playerX
     end
 
-    function handleCollisions(this::PlayerMovement, otherCollider)
-        return
+    function handleCollisions(this::PlayerMovement, collision)
+        otherCollider = collision.collider
         if otherCollider.tag == "Coin"
-            JulGame.SceneModule.destroy_entity(MAIN, otherCollider.parent)
+            JulGame.destroy(otherCollider.parent)
             #JulGame.Component.toggle_sound(this.coinSound)
-            JulGame.UI.update_text(MAIN.scene.uiElements[1], string(parse(Int, split(MAIN.scene.uiElements[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.uiElements[1].text, "/")[2])))
+            MAIN.scene.uiElements[1].text = string(parse(Int, split(MAIN.scene.uiElements[1].text, "/")[1]) + 1, "/", parse(Int, split(MAIN.scene.uiElements[1].text, "/")[2]))
             if parse(Int, split(MAIN.scene.uiElements[1].text, "/")[1]) == parse(Int, split(MAIN.scene.uiElements[1].text, "/")[2])
                 if this.gameManager.currentLevel == 1
                     if this.deathsThisLevel == 0
@@ -190,11 +192,11 @@ module PlayerMovementModule
                 else 
                     # you win text
                     MAIN.scene.uiElements[1].isCenteredX, MAIN.scene.uiElements[1].isCenteredY = true, true
-                    JulGame.UI.update_text(MAIN.scene.uiElements[1], "You Win!")
+                    MAIN.scene.uiElements[1].text = "You Win!"
 
                     if this.deathsThisLevel == 0
                         this.gameManager.starCount = this.gameManager.starCount + 1
-                        JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))
+                        MAIN.scene.uiElements[2].text = string(this.gameManager.starCount)
                     end
                 end
             end
@@ -202,9 +204,9 @@ module PlayerMovementModule
             respawn(this)
         elseif otherCollider.tag == "Star"
             #JulGame.Component.toggle_sound(this.starSound)
-            JulGame.SceneModule.destroy_entity(MAIN, otherCollider.parent)
+            JulGame.destroy(otherCollider.parent)
             this.gameManager.starCount = this.gameManager.starCount + 1
-            JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))
+            MAIN.scene.uiElements[2].text = string(this.gameManager.starCount)
         end
     end
 
@@ -212,7 +214,7 @@ module PlayerMovementModule
        # JulGame.Component.toggle_sound(this.hurtSound)
         this.parent.transform.position = Vector2f(1, 4)
         this.gameManager.starCount = max(this.gameManager.starCount - 1, 0)
-        #JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.gameManager.starCount))
+        MAIN.scene.uiElements[2].text = string(this.gameManager.starCount)
         this.deathsThisLevel += 1
         
         # Reset camera smoothing state

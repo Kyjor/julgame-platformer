@@ -1,11 +1,11 @@
 module GameManagerModule
     using JulGame
 
-    mutable struct GameManager
-        currentLevel::Int32
+    mutable struct GameManager <: Script
+        currentLevel
         currentMusic
         soundBank
-        starCount::Int32
+        starCount
         parent
 
         function GameManager()
@@ -26,30 +26,15 @@ module GameManagerModule
 
 
     function JulGame.initialize(this::GameManager)
-        MAIN.scene.camera.offset = JulGame.Math.Vector2f(0, -2.75)
-        return
-        MAIN.cameraBackgroundColor = (30, 111, 80)
+        MAIN.scene.camera.backgroundColor = (30, 111, 80, 255)
 
-        JulGame.add_shape(this.parent, JulGame.ShapeModule.Shape(Math.Vector3(0,0,0), Math.Vector2f(10,5),  true, false, Math.Vector2f(0,0), Math.Vector2f(1.2175,0.5)))
-        coinUI = JulGame.SceneModule.get_entity_by_name(MAIN.scene, "CoinUI")
-        livesUI = JulGame.SceneModule.get_entity_by_name(MAIN.scene, "LivesUI")
-
-        coinUI.persistentBetweenScenes = true
-        coinUI.sprite.isWorldEntity = false
-        coinUI.sprite.position = JulGame.Math.Vector2f(-.1, 1)
-
-        livesUI.persistentBetweenScenes = true
-        livesUI.sprite.isWorldEntity = false
-        livesUI.sprite.position = JulGame.Math.Vector2f(-.1, .25)
-                
-        this.parent.persistentBetweenScenes = true
         if this.currentLevel > 1
             JulGame.Component.unload_sound(this.currentMusic)
         end
 
-        this.currentMusic = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), true, this.soundBank[this.currentLevel], Int32(25)))
-        JulGame.Component.toggle_sound(this.currentMusic)
+        #this.currentMusic = JulGame.create_sound_source(this.parent, JulGame.SoundSourceModule.SoundSource(Int32(-1), true, this.soundBank[this.currentLevel], Int32(25)))
+        #JulGame.Component.toggle_sound(this.currentMusic)
         
-        JulGame.UI.update_text(MAIN.scene.uiElements[2], string(this.starCount))
+        MAIN.scene.uiElements[2].text = string(this.starCount)
     end
 end # module

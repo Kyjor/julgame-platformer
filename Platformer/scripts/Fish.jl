@@ -3,22 +3,22 @@ module FishModule
 
     mutable struct Fish <: Script
         animator
-        endingY::Int32
-        isFire::Bool
+        endingY::EditorExport{Int}
+        isFire::EditorExport{Bool}
         isMovingUp::Bool
         parent::JulGame.EntityModule.Entity
         sound::SoundSourceModule.SoundSource
-        speed::Number
-        startingY::Int32
+        speed::EditorExport{Float64}
+        startingY::EditorExport{Int}
 
-        function Fish(speed::Number = 5, startingY::Int32 = Int32(0), endingY::Int32 = Int32(0), isFire::Bool = false)
+        function Fish()
             this = new()
 
-            this.endingY = endingY
-            this.isFire = isFire
+            this.endingY = 0
+            this.isFire = false
             this.isMovingUp = false
-            this.speed = speed
-            this.startingY = startingY
+            this.speed = 0.0
+            this.startingY = 0
 
             return this
         end
@@ -27,6 +27,7 @@ module FishModule
     function JulGame.initialize(this::Fish)
         this.animator = this.parent.animator
         this.parent.sprite.rotation = 90.0
+        this.parent.transform.position = Vector2f(this.parent.transform.position.x, this.startingY)
     end
 
     function JulGame.update(this::Fish, deltaTime)

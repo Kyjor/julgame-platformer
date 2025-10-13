@@ -24,6 +24,7 @@ module SpiderModule
 
     function JulGame.initialize(this::Spider)
         this.animator = this.parent.animator
+        this.parent.transform.position = Vector2f(this.startingX, this.parent.transform.position.y)
     end
     function JulGame.update(this::Spider, deltaTime)
         if this.parent.transform.position.x <= this.startingX && !this.isMovingRight

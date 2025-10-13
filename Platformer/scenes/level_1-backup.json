@@ -20,12 +20,12 @@
                     },
                     "type": "Transform",
                     "scale": {
-                        "x": 2.15,
+                        "x": 2.1500000953674316,
                         "y": 1.75
                     }
                 }
             ],
-            "persistentBetweenScenes": false
+            "persistentBetweenScenes": true
         },
         {
             "isActive": true,
@@ -54,7 +54,7 @@
                         "x": 0,
                         "y": 0
                     },
-                    "pixelsPerUnit": 0,
+                    "pixelsPerUnit": -1,
                     "offset": {
                         "x": 0,
                         "y": 0
@@ -79,7 +79,7 @@
                 {
                     "position": {
                         "x": 0,
-                        "y": 3
+                        "y": 0
                     },
                     "type": "Transform",
                     "scale": {
@@ -97,6 +97,7 @@
                 {
                     "name": "PlayerMovement",
                     "fields": {
+                        "jumpVelocity": -7
                     }
                 }
             ],
@@ -252,8 +253,8 @@
                 },
                 {
                     "position": {
-                        "x": 1,
-                        "y": 3
+                        "x": 4.890625,
+                        "y": 2.5625
                     },
                     "type": "Transform",
                     "scale": {
@@ -5146,7 +5147,7 @@
                 },
                 {
                     "position": {
-                        "x": 63,
+                        "x": 64,
                         "y": 1
                     },
                     "type": "Transform",
@@ -24075,6 +24076,10 @@
                 {
                     "name": "Fish",
                     "fields": {
+                        "endingY": 3,
+                        "isFire": false,
+                        "speed": 3,
+                        "startingY": 8
                     }
                 }
             ],
@@ -24185,6 +24190,9 @@
                 {
                     "name": "Spider",
                     "fields": {
+                        "startingX": 10,
+                        "speed": 2,
+                        "endingX": 13
                     }
                 }
             ],
@@ -24301,6 +24309,9 @@
                 {
                     "name": "Spider",
                     "fields": {
+                        "startingX": 7,
+                        "speed": 2,
+                        "endingX": 10
                     }
                 }
             ],
@@ -24417,6 +24428,9 @@
                 {
                     "name": "Spider",
                     "fields": {
+                        "startingX": 56,
+                        "speed": 3,
+                        "endingX": 69
                     }
                 }
             ],
@@ -24533,6 +24547,9 @@
                 {
                     "name": "Spider",
                     "fields": {
+                        "startingX": 30,
+                        "speed": 2,
+                        "endingX": 35
                     }
                 }
             ],
@@ -24795,6 +24812,9 @@
                 {
                     "name": "Spider",
                     "fields": {
+                        "startingX": 26,
+                        "speed": 2,
+                        "endingX": 29
                     }
                 }
             ],
@@ -24911,6 +24931,10 @@
                 {
                     "name": "Fish",
                     "fields": {
+                        "endingY": -2,
+                        "isFire": false,
+                        "speed": 3,
+                        "startingY": 6
                     }
                 }
             ],
@@ -25021,6 +25045,10 @@
                 {
                     "name": "Fish",
                     "fields": {
+                        "endingY": 2,
+                        "isFire": false,
+                        "speed": 3,
+                        "startingY": 8
                     }
                 }
             ],
@@ -25131,6 +25159,10 @@
                 {
                     "name": "Fish",
                     "fields": {
+                        "endingY": 2,
+                        "isFire": false,
+                        "speed": 3,
+                        "startingY": 8
                     }
                 }
             ],
@@ -25241,6 +25273,10 @@
                 {
                     "name": "Fish",
                     "fields": {
+                        "endingY": 3,
+                        "isFire": false,
+                        "speed": 3,
+                        "startingY": 8
                     }
                 }
             ],
@@ -25351,6 +25387,10 @@
                 {
                     "name": "Fish",
                     "fields": {
+                        "endingY": -2,
+                        "isFire": false,
+                        "speed": 3,
+                        "startingY": 6
                     }
                 }
             ],

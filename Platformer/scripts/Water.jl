@@ -17,7 +17,7 @@ module WaterModule
     end
 
     function JulGame.initialize(this::Water)
-        this.offset = JulGame.Math.Vector2f(this.parent.transform.position.x + 9, 5.5)
+        this.offset = JulGame.Math.Vector2f(this.parent.transform.position.x + 9, 7.5)
     end
 
     function JulGame.update(this::Water, deltaTime)
