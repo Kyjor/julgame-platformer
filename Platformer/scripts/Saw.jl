@@ -3,22 +3,22 @@ module SawModule
 
     mutable struct Saw <: Script
         animator::AnimatorModule.Animator
-        endingY::Float64
+        endingY::EditorExport{Float64}
         isMovingUp::Bool
         rotation::Float64
         parent::JulGame.EntityModule.Entity
         sound::SoundSourceModule.SoundSource
         speed::Number
-        startingY::Float64
+        startingY::EditorExport{Float64}
 
         function Saw()
             this = new()
 
-            this.endingY = 3
+            this.endingY = 3.0
             this.isMovingUp = false
             this.rotation = 0.0
             this.speed = 5.0
-            this.startingY = 0
+            this.startingY = 0.0
 
             return this
         end

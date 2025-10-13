@@ -18,6 +18,11 @@ module PlayerMovementModule
         parent
         starSound
         cameraOffsetY::EditorExport{Float64}
+        
+        # Variable jump variables
+        jumpReleased
+        minJumpVelocity::EditorExport{Float64}
+        jumpDampening::EditorExport{Float64}
 
         xDir
         yDir
@@ -45,6 +50,11 @@ module PlayerMovementModule
             this.jumpSound = C_NULL 
             this.jumpVelocity = -10.0
             this.cameraOffsetY = 2.0
+            
+            # Variable jump settings
+            this.jumpReleased = true
+            this.minJumpVelocity = -3.0  # Minimum jump height when button released early
+            this.jumpDampening = 0.4  # How much to dampen upward velocity when button released
 
             this.xDir = 0
             this.yDir = 0
@@ -91,11 +101,30 @@ module PlayerMovementModule
         # Inputs match SDL2 scancodes after "SDL_SCANCODE_"
         # https://wiki.libsdl.org/SDL2/SDL_Scancode
         # Spaces full scancode is "SDL_SCANCODE_SPACE" so we use "SPACE". Every other key is the same.
-        if ((JulGame.InputModule.get_button_pressed(input, "SPACE")  || input.button == 1)|| this.isJump) && this.parent.rigidbody.grounded && this.canMove 
+        
+        # Jump input
+        jumpPressed = JulGame.InputModule.get_button_pressed(input, "SPACE") || input.button == 1 || this.isJump
+        jumpHeld = JulGame.InputModule.get_button_held_down(input, "SPACE") || input.button == 1
+        
+        if jumpPressed && this.parent.rigidbody.grounded && this.canMove 
             JulGame.Component.toggle_sound(this.jumpSound)
             JulGame.RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(JulGame.Component.get_velocity(this.parent.rigidbody).x, 0))
             JulGame.RigidbodyModule.add_velocity(this.parent.rigidbody, Vector2f(0, this.jumpVelocity))
             this.animator.currentAnimation = this.animator.animations[3]
+            this.jumpReleased = false
+        end
+        
+        # Variable jump height: dampen upward velocity when jump button is released
+        currentVelocity = JulGame.Component.get_velocity(this.parent.rigidbody)
+        if !jumpHeld && !this.jumpReleased && currentVelocity.y < this.minJumpVelocity
+            # Player released jump button while still going up - apply dampening
+            JulGame.RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(currentVelocity.x, currentVelocity.y * this.jumpDampening))
+            this.jumpReleased = true
+        end
+        
+        # Reset jumpReleased when grounded
+        if this.parent.rigidbody.grounded
+            this.jumpReleased = true
         end
         if (JulGame.InputModule.get_button_held_down(input, "A") || JulGame.InputModule.get_button_held_down(input, "LEFT") || input.xDir == -1) && this.canMove
             x = -speed
@@ -182,13 +211,13 @@ module PlayerMovementModule
                         this.gameManager.starCount = this.gameManager.starCount + 1
                     end
                     this.gameManager.currentLevel = 2
-                    JulGame.MainLoop.change_scene("level_2.json")
+                    JulGame.change_scene("level_2.json")
                 elseif this.gameManager.currentLevel == 2
                     if this.deathsThisLevel == 0
                         this.gameManager.starCount = this.gameManager.starCount + 1
                     end
                     this.gameManager.currentLevel = 3
-                    JulGame.MainLoop.change_scene("level_3.json")
+                    JulGame.change_scene("level_3.json")
                 else 
                     # you win text
                     MAIN.scene.uiElements[1].isCenteredX, MAIN.scene.uiElements[1].isCenteredY = true, true

@@ -7,6 +7,7 @@ module GameManagerModule
         soundBank
         starCount
         parent
+        offsetApplied::Bool  # Track if we've set the batching offset
 
         function GameManager()
             this = new()
@@ -19,12 +20,13 @@ module GameManagerModule
                 "strong-wind.wav",
             ]
             this.starCount = 3
-
+            this.offsetApplied = false
+            
             return this
         end
     end
-
-
+    
+    
     function JulGame.initialize(this::GameManager)
         MAIN.scene.camera.backgroundColor = (30, 111, 80, 255)
 
@@ -36,5 +38,15 @@ module GameManagerModule
         #JulGame.Component.toggle_sound(this.currentMusic)
         
         MAIN.scene.uiElements[2].text = string(this.starCount)
+    end
+    
+    function JulGame.update(this::GameManager, deltaTime)
+        # WORKAROUND: Static batching requires 32,32 offset (half SCALE_UNITS)
+        # TODO: Fix root cause in StaticSpriteBatcher.jl alignment calculation
+        # See: cursor/static-batching-alignment-todo.md
+        if !this.offsetApplied
+            JulGame.set_batched_layer_offset(0, 32.0, 32.0)
+            this.offsetApplied = true
+        end
     end
 end # module
