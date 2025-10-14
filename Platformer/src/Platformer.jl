@@ -84,6 +84,7 @@ module Platformer
     
         try
             SceneBuilderModule.load_and_prepare_scene(scene; windowName="Platformer", preloadAllScenes=false, scalingQuality="nearest")
+            JulGame.MainLoopModule.print_profiling_report()
         catch e
             @error first(string(e), min(length(string(e)), 500))
             log_error(first(string(e), min(length(string(e)), 500)))

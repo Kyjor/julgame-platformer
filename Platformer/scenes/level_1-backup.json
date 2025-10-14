@@ -54,7 +54,7 @@
                         "x": 0,
                         "y": 0
                     },
-                    "isStatic": true,
+                    "isStatic": false,
                     "pixelsPerUnit": -1,
                     "offset": {
                         "x": 0,
@@ -23958,7 +23958,7 @@
                         "x": 0,
                         "y": 0
                     },
-                    "isStatic": true,
+                    "isStatic": false,
                     "pixelsPerUnit": -1,
                     "offset": {
                         "x": 0,
@@ -23983,8 +23983,8 @@
                 },
                 {
                     "position": {
-                        "x": 58,
-                        "y": 4
+                        "x": 57,
+                        "y": 3.984375
                     },
                     "type": "Transform",
                     "scale": {
@@ -24032,7 +24032,7 @@
                         "x": 0,
                         "y": 0
                     },
-                    "isStatic": true,
+                    "isStatic": false,
                     "pixelsPerUnit": -1,
                     "offset": {
                         "x": 0,
@@ -24106,7 +24106,7 @@
                         "x": 0,
                         "y": 0
                     },
-                    "isStatic": true,
+                    "isStatic": false,
                     "pixelsPerUnit": -1,
                     "offset": {
                         "x": 0,
@@ -24254,7 +24254,7 @@
                         "x": 0,
                         "y": 0
                     },
-                    "isStatic": true,
+                    "isStatic": false,
                     "pixelsPerUnit": -1,
                     "offset": {
                         "x": 0,
@@ -24328,7 +24328,7 @@
                         "x": 0,
                         "y": 0
                     },
-                    "isStatic": true,
+                    "isStatic": false,
                     "pixelsPerUnit": -1,
                     "offset": {
                         "x": 0,
