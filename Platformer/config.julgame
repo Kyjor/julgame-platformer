@@ -1,6 +1,7 @@
 Width=1280
 Height=720
 FrameRate=120
+PixelsPerUnit=16
 Vsync=0
 IsResizable=0
 Fullscreen=0
