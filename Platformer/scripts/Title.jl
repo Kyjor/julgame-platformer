@@ -18,7 +18,7 @@ module TitleModule
     end
 
     function JulGame.initialize(this::Title)
-        JulGame.MainLoopModule.enable_profiling()
+        #JulGame.MainLoopModule.enable_profiling()
         this.textBox = MAIN.scene.uiElements[1]
     end
 

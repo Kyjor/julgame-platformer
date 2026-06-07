@@ -79,7 +79,7 @@ module PlayerMovementModule
         this.animator = this.parent.animator
         this.animator.currentAnimation = this.animator.animations[1]
         this.jumpSound = this.parent.soundSource
-        this.cameraTarget = JulGame.TransformModule.Transform(Vector2f(this.parent.transform.position.x, this.cameraOffsetY))
+        this.cameraTarget = JulGame.TransformModule.Transform(Vector3f(this.parent.transform.position.x, this.cameraOffsetY, 0.0))
         MAIN.scene.camera.target = this.cameraTarget
         this.cameraTargetX = this.parent.transform.position.x
         this.lastPlayerX = this.parent.transform.position.x
@@ -108,7 +108,7 @@ module PlayerMovementModule
         
         if jumpPressed && this.parent.rigidbody.grounded && this.canMove 
             JulGame.Component.toggle_sound(this.jumpSound)
-            JulGame.RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(JulGame.Component.get_velocity(this.parent.rigidbody).x, 0))
+            this.parent.rigidbody.velocity = Vector2f(this.parent.rigidbody.velocity.x, 0)
             JulGame.RigidbodyModule.add_velocity(this.parent.rigidbody, Vector2f(0, this.jumpVelocity))
             this.animator.currentAnimation = this.animator.animations[3]
             this.jumpReleased = false
@@ -118,7 +118,7 @@ module PlayerMovementModule
         currentVelocity = JulGame.Component.get_velocity(this.parent.rigidbody)
         if !jumpHeld && !this.jumpReleased && currentVelocity.y < this.minJumpVelocity
             # Player released jump button while still going up - apply dampening
-            JulGame.RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(currentVelocity.x, currentVelocity.y * this.jumpDampening))
+            this.parent.rigidbody.velocity = Vector2f(currentVelocity.x, currentVelocity.y * this.jumpDampening)
             this.jumpReleased = true
         end
         
@@ -148,7 +148,7 @@ module PlayerMovementModule
             this.animator.currentAnimation = this.animator.animations[1]
         end
         
-        JulGame.RigidbodyModule.set_velocity(this.parent.rigidbody, Vector2f(x, JulGame.Component.get_velocity(this.parent.rigidbody).y))
+        this.parent.rigidbody.velocity = Vector2f(x, this.parent.rigidbody.velocity.y)
         x = 0
         this.isJump = false
         if this.parent.transform.position.y > 8
@@ -192,7 +192,7 @@ module PlayerMovementModule
             lerpFactor = min(deltaTime * this.cameraFollowSpeed, 1.0)
             easedLerp = ease_out_cubic(lerpFactor)
             newCameraX = currentCameraX + (this.cameraTargetX - currentCameraX) * easedLerp
-            this.cameraTarget.position = Vector2f(newCameraX, this.cameraOffsetY)
+            this.cameraTarget.position = Vector3f(newCameraX, this.cameraOffsetY, this.cameraTarget.position.z)
         end
         
         # Update last player position for velocity calculation
@@ -241,7 +241,8 @@ module PlayerMovementModule
 
     function respawn(this::PlayerMovement)
        # JulGame.Component.toggle_sound(this.hurtSound)
-        this.parent.transform.position = Vector2f(1, 4)
+        pos = this.parent.transform.position
+        this.parent.transform.position = Vector3f(1, 4, pos.z)
         this.gameManager.starCount = max(this.gameManager.starCount - 1, 0)
         MAIN.scene.uiElements[2].text = string(this.gameManager.starCount)
         this.deathsThisLevel += 1
